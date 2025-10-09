@@ -1748,6 +1748,13 @@ body {
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
+/* Hide loader when page is loaded */
+body.loaded .loader-wrapper {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
 .loader-wrapper.hidden {
     opacity: 0;
     visibility: hidden;
