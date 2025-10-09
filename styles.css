@@ -1811,7 +1811,7 @@ body.loaded .loader-wrapper {
 .scroll-to-top {
     position: fixed;
     left: 30px;
-    bottom: 30px;
+    bottom: 160px;
     width: 56px;
     height: 56px;
     background: var(--primary-blue);
