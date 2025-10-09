@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ผลงาน SS INTEGRATION - โครงการที่ผ่านมาในด้านระบบวิศวกรรมอาคาร">
+    <title>ผลงานของเรา | SS INTEGRATION</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Wiring Diagram Background -->
+    <div class="wiring-background" id="wiringBg">
+        <svg class="wiring-svg" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+            <g class="circuit-lines">
+                <line x1="0" y1="100" x2="1920" y2="100" class="circuit-line" />
+                <line x1="0" y1="300" x2="1920" y2="300" class="circuit-line" />
+                <line x1="0" y1="500" x2="1920" y2="500" class="circuit-line" />
+                <line x1="300" y1="0" x2="300" y2="1080" class="circuit-line" />
+                <line x1="900" y1="0" x2="900" y2="1080" class="circuit-line" />
+                <line x1="1500" y1="0" x2="1500" y2="1080" class="circuit-line" />
+            </g>
+            <g class="circuit-nodes">
+                <circle cx="300" cy="300" r="4" class="node pulse" />
+                <circle cx="900" cy="500" r="4" class="node pulse" />
+            </g>
+        </svg>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">SS INTEGRATION</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">หน้าแรก</a></li>
+                <li><a href="about.html" class="nav-link">เกี่ยวกับเรา</a></li>
+                <li><a href="services.html" class="nav-link">บริการ</a></li>
+                <li><a href="projects.html" class="nav-link active">ผลงาน</a></li>
+                <li><a href="contact.html" class="nav-link btn-contact">ติดต่อเรา</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title fade-in">ผลงานของเรา</h1>
+            <p class="page-subtitle fade-in">โครงการที่เราภาคภูมิใจในการส่งมอบ</p>
+        </div>
+    </section>
+
+    <!-- Project Filter -->
+    <section class="project-filter-section">
+        <div class="container">
+            <div class="filter-buttons fade-up">
+                <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
+                <button class="filter-btn" data-filter="hospital">โรงพยาบาล</button>
+                <button class="filter-btn" data-filter="parking">อาคารจอดรถ</button>
+                <button class="filter-btn" data-filter="university">มหาวิทยาลัย</button>
+                <button class="filter-btn" data-filter="office">อาคารสำนักงาน</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-full-section">
+        <div class="container">
+            <div class="projects-full-grid">
+                <!-- Project 1 -->
+                <div class="project-full-card fade-up" data-category="hospital">
+                    <div class="project-full-image">
+                        <div class="project-placeholder">
+                            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="300" fill="#E8F0FE"/>
+                                <path d="M160 100 L240 100 L240 140 L220 140 L220 160 L180 160 L180 140 L160 140 Z" fill="#1E40AF"/>
+                                <rect x="160" y="170" width="80" height="80" fill="#3B82F6"/>
+                                <circle cx="200" cy="120" r="5" fill="#DC2626"/>
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-year">2023</span>
+                        </div>
+                    </div>
+                    <div class="project-full-content">
+                        <h3 class="project-full-title">โรงพยาบาลศูนย์การแพทย์ใหม่</h3>
+                        <p class="project-full-category">ระบบไฟฟ้า • ประปา • แอร์</p>
+                        <p class="project-full-desc">
+                            โครงการออกแบบและติดตั้งระบบวิศวกรรมครบวงจร สำหรับโรงพยาบาล 300 เตียง 
+                            รวมถึงระบบสำรองไฟฟ้า ระบบน้ำดับเพลิง และระบบปรับอากาศสำหรับห้องผ่าตัด
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <strong>พื้นที่:</strong> 15,000 ตร.ม.
+                            </div>
+                            <div class="stat">
+                                <strong>ระยะเวลา:</strong> 18 เดือน
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-full-card fade-up" data-category="parking">
+                    <div class="project-full-image">
+                        <div class="project-placeholder">
+                            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="300" fill="#E8F0FE"/>
+                                <rect x="100" y="80" width="200" height="140" stroke="#1E40AF" stroke-width="3" fill="none"/>
+                                <line x1="100" y1="120" x2="300" y2="120" stroke="#3B82F6" stroke-width="2"/>
+                                <line x1="100" y1="160" x2="300" y2="160" stroke="#3B82F6" stroke-width="2"/>
+                                <rect x="120" y="180" width="40" height="25" fill="#1E40AF"/>
+                                <rect x="240" y="180" width="40" height="25" fill="#1E40AF"/>
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-year">2023</span>
+                        </div>
+                    </div>
+                    <div class="project-full-content">
+                        <h3 class="project-full-title">อาคารจอดรถอัจฉริยะ Central Plaza</h3>
+                        <p class="project-full-category">ระบบไฟฟ้า • ระบบควบคุม</p>
+                        <p class="project-full-desc">
+                            ระบบไฟฟ้าและระบบควบคุมอัตโนมัติสำหรับอาคารจอดรถ 800 คัน 
+                            พร้อมระบบส่องสว่างอัจฉริยะและระบบตรวจจับที่จอดว่าง
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <strong>ความจุ:</strong> 800 คัน
+                            </div>
+                            <div class="stat">
+                                <strong>ระยะเวลา:</strong> 12 เดือน
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-full-card fade-up" data-category="university">
+                    <div class="project-full-image">
+                        <div class="project-placeholder">
+                            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="300" fill="#E8F0FE"/>
+                                <circle cx="200" cy="150" r="60" stroke="#1E40AF" stroke-width="3" fill="none"/>
+                                <circle cx="200" cy="150" r="35" fill="#3B82F6"/>
+                                <path d="M140 150 L200 90 L260 150" stroke="#1E40AF" stroke-width="3" fill="none"/>
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-year">2022</span>
+                        </div>
+                    </div>
+                    <div class="project-full-content">
+                        <h3 class="project-full-title">มหาวิทยาลัยเทคโนโลยี</h3>
+                        <p class="project-full-category">ระบบแอร์ • ระบบประปา</p>
+                        <p class="project-full-desc">
+                            ปรับปรุงระบบปรับอากาศและระบบประปาสำหรับอาคารเรียน 15 หลัง 
+                            เพื่อเพิ่มประสิทธิภาพและลดค่าใช้จ่ายด้านพลังงาน
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <strong>อาคาร:</strong> 15 หลัง
+                            </div>
+                            <div class="stat">
+                                <strong>ระยะเวลา:</strong> 24 เดือน
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-full-card fade-up" data-category="office">
+                    <div class="project-full-image">
+                        <div class="project-placeholder">
+                            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="300" fill="#E8F0FE"/>
+                                <rect x="120" y="60" width="160" height="180" fill="#1E40AF"/>
+                                <rect x="135" y="80" width="30" height="30" fill="#E8F0FE"/>
+                                <rect x="185" y="80" width="30" height="30" fill="#E8F0FE"/>
+                                <rect x="235" y="80" width="30" height="30" fill="#E8F0FE"/>
+                                <rect x="135" y="130" width="30" height="30" fill="#E8F0FE"/>
+                                <rect x="185" y="130" width="30" height="30" fill="#E8F0FE"/>
+                                <rect x="235" y="130" width="30" height="30" fill="#E8F0FE"/>
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-year">2022</span>
+                        </div>
+                    </div>
+                    <div class="project-full-content">
+                        <h3 class="project-full-title">อาคารสำนักงาน AI Tower</h3>
+                        <p class="project-full-category">ระบบไฟฟ้า • แอร์ • ประปา</p>
+                        <p class="project-full-desc">
+                            ระบบวิศวกรรมครบวงจรสำหรับอาคารสำนักงาน 20 ชั้น 
+                            พร้อมระบบจัดการพลังงานอัจฉริยะและ Building Management System
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <strong>พื้นที่:</strong> 25,000 ตร.ม.
+                            </div>
+                            <div class="stat">
+                                <strong>ระยะเวลา:</strong> 20 เดือน
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-full-card fade-up" data-category="hospital">
+                    <div class="project-full-image">
+                        <div class="project-placeholder">
+                            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="300" fill="#E8F0FE"/>
+                                <rect x="150" y="100" width="100" height="100" stroke="#1E40AF" stroke-width="3" fill="none"/>
+                                <line x1="200" y1="120" x2="200" y2="180" stroke="#DC2626" stroke-width="5"/>
+                                <line x1="170" y1="150" x2="230" y2="150" stroke="#DC2626" stroke-width="5"/>
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-year">2021</span>
+                        </div>
+                    </div>
+                    <div class="project-full-content">
+                        <h3 class="project-full-title">คลินิกเฉพาะทาง</h3>
+                        <p class="project-full-category">ระบบไฟฟ้า • แอร์</p>
+                        <p class="project-full-desc">
+                            ติดตั้งระบบไฟฟ้าและปรับอากาศสำหรับคลินิกเฉพาะทาง 
+                            พร้อมระบบควบคุมคุณภาพอากาศและความชื้นสำหรับห้องตรวจ
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <strong>พื้นที่:</strong> 2,500 ตร.ม.
+                            </div>
+                            <div class="stat">
+                                <strong>ระยะเวลา:</strong> 6 เดือน
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-full-card fade-up" data-category="office">
+                    <div class="project-full-image">
+                        <div class="project-placeholder">
+                            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="300" fill="#E8F0FE"/>
+                                <path d="M100 200 L200 80 L300 200 Z" stroke="#1E40AF" stroke-width="3" fill="none"/>
+                                <rect x="170" y="150" width="60" height="50" fill="#3B82F6"/>
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-year">2021</span>
+                        </div>
+                    </div>
+                    <div class="project-full-content">
+                        <h3 class="project-full-title">โครงการคอนโดมิเนียม</h3>
+                        <p class="project-full-category">ระบบไฟฟ้า • ประปา • แอร์</p>
+                        <p class="project-full-desc">
+                            ระบบวิศวกรรมครบวงจรสำหรับอาคารคอนโดมิเนียม 30 ชั้น 500 ยูนิต 
+                            รวมถึงระบบส่วนกลางและระบบสาธารณูปโภคทั้งหมด
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <strong>ยูนิต:</strong> 500 ยูนิต
+                            </div>
+                            <div class="stat">
+                                <strong>ระยะเวลา:</strong> 30 เดือน
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content fade-up">
+                <h2 class="cta-title">มีโครงการที่ต้องการความช่วยเหลือ?</h2>
+                <p class="cta-subtitle">ติดต่อเราเพื่อรับคำปรึกษาและใบเสนอราคาฟรี</p>
+                <a href="contact.html" class="btn btn-primary btn-large">ปรึกษาโครงการ</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-title">SS INTEGRATION</h3>
+                    <p class="footer-text">
+                        ผู้เชี่ยวชาญด้านวิศวกรรมและการติดตั้งระบบอาคาร 
+                        พร้อมให้บริการด้วยมาตรฐานสูงสุด
+                    </p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">บริการ</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#electrical">ระบบไฟฟ้า</a></li>
+                        <li><a href="services.html#plumbing">ระบบประปา</a></li>
+                        <li><a href="services.html#hvac">ระบบปรับอากาศ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">บริษัท</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">เกี่ยวกับเรา</a></li>
+                        <li><a href="projects.html">ผลงาน</a></li>
+                        <li><a href="contact.html">ติดต่อเรา</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">ติดต่อ</h4>
+                    <ul class="footer-contact">
+                        <li>📧 info@ssintegration.com</li>
+                        <li>📱 02-XXX-XXXX</li>
+                        <li>📍 กรุงเทพมหานคร</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 SS INTEGRATION. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Project Filter
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-full-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+
+                const filterValue = this.getAttribute('data-filter');
+
+                projectCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SS INTEGRATION - ผู้เชี่ยวชาญด้านวิศวกรรม การออกแบบและติดตั้งระบบไฟฟ้า ประปา และแอร์ปรับอากาศ">
+    <title>SS INTEGRATION | Engineering Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Wiring Diagram Background -->
+    <div class="wiring-background" id="wiringBg">
+        <svg class="wiring-svg" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+            <!-- Circuit Lines -->
+            <g class="circuit-lines">
+                <!-- Horizontal Lines -->
+                <line x1="0" y1="100" x2="1920" y2="100" class="circuit-line" />
+                <line x1="0" y1="300" x2="1920" y2="300" class="circuit-line" />
+                <line x1="0" y1="500" x2="1920" y2="500" class="circuit-line" />
+                <line x1="0" y1="700" x2="1920" y2="700" class="circuit-line" />
+                <line x1="0" y1="900" x2="1920" y2="900" class="circuit-line" />
+                
+                <!-- Vertical Lines -->
+                <line x1="300" y1="0" x2="300" y2="1080" class="circuit-line" />
+                <line x1="600" y1="0" x2="600" y2="1080" class="circuit-line" />
+                <line x1="900" y1="0" x2="900" y2="1080" class="circuit-line" />
+                <line x1="1200" y1="0" x2="1200" y2="1080" class="circuit-line" />
+                <line x1="1500" y1="0" x2="1500" y2="1080" class="circuit-line" />
+                
+                <!-- Diagonal Lines -->
+                <line x1="0" y1="0" x2="400" y2="400" class="circuit-line diagonal" />
+                <line x1="1520" y1="0" x2="1920" y2="400" class="circuit-line diagonal" />
+            </g>
+            
+            <!-- Circuit Nodes -->
+            <g class="circuit-nodes">
+                <circle cx="300" cy="100" r="4" class="node" />
+                <circle cx="600" cy="300" r="4" class="node pulse" />
+                <circle cx="900" cy="100" r="4" class="node" />
+                <circle cx="1200" cy="500" r="4" class="node pulse" />
+                <circle cx="1500" cy="300" r="4" class="node" />
+                <circle cx="300" cy="700" r="4" class="node pulse" />
+                <circle cx="900" cy="700" r="4" class="node" />
+                <circle cx="1500" cy="900" r="4" class="node pulse" />
+            </g>
+            
+            <!-- Symbols -->
+            <g class="symbols">
+                <rect x="580" y="280" width="40" height="40" class="symbol-box" />
+                <rect x="1180" y="480" width="40" height="40" class="symbol-box" />
+                <circle cx="320" cy="120" r="20" class="symbol-circle" />
+            </g>
+        </svg>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">SS INTEGRATION</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">หน้าแรก</a></li>
+                <li><a href="about.html" class="nav-link">เกี่ยวกับเรา</a></li>
+                <li><a href="services.html" class="nav-link">บริการ</a></li>
+                <li><a href="projects.html" class="nav-link">ผลงาน</a></li>
+                <li><a href="contact.html" class="nav-link btn-contact">ติดต่อเรา</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1 class="hero-title">
+                    <span class="title-line">Engineering</span>
+                    <span class="title-line">Excellence</span>
+                </h1>
+                <p class="hero-subtitle">
+                    ผู้เชี่ยวชาญด้านการออกแบบและติดตั้งระบบวิศวกรรม<br>
+                    ไฟฟ้า ประปา และแอร์ปรับอากาศสำหรับอาคารทุกประเภท
+                </p>
+                <div class="hero-buttons">
+                    <a href="services.html" class="btn btn-primary">บริการของเรา</a>
+                    <a href="projects.html" class="btn btn-secondary">ดูผลงาน</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item fade-up">
+                    <div class="stat-number" data-target="15">0</div>
+                    <div class="stat-label">ปีแห่งประสบการณ์</div>
+                </div>
+                <div class="stat-item fade-up">
+                    <div class="stat-number" data-target="200">0</div>
+                    <div class="stat-label">โครงการสำเร็จ</div>
+                </div>
+                <div class="stat-item fade-up">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">ลูกค้าองค์กร</div>
+                </div>
+                <div class="stat-item fade-up">
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-label">ความพึงพอใจ %</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2 class="section-title">บริการของเรา</h2>
+                <p class="section-subtitle">ครบวงจรด้านระบบวิศวกรรมอาคาร</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card fade-up">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">ระบบไฟฟ้า</h3>
+                    <p class="service-description">
+                        ออกแบบ ติดตั้ง และบำรุงรักษาระบบไฟฟ้าแรงสูง-แรงต่ำ 
+                        ระบบส่องสว่าง และระบบสำรองไฟฟ้า
+                    </p>
+                    <a href="services.html#electrical" class="service-link">เรียนรู้เพิ่มเติม →</a>
+                </div>
+                
+                <div class="service-card fade-up">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2.69L17 7.19V20H7V7.19L12 2.69Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 21V12H15V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="12" cy="9" r="1" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">ระบบประปา</h3>
+                    <p class="service-description">
+                        ระบบน้ำประปา น้ำดับเพลิง ระบายน้ำ 
+                        และระบบบำบัดน้ำเสียสำหรับอาคารทุกประเภท
+                    </p>
+                    <a href="services.html#plumbing" class="service-link">เรียนรู้เพิ่มเติม →</a>
+                </div>
+                
+                <div class="service-card fade-up">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 3V7C14 8.10457 14.8954 9 16 9H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17 21H7C5.89543 21 5 20.1046 5 19V5C5 3.89543 5.89543 3 7 3H14L19 8V19C19 20.1046 18.1046 21 17 21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 13C9 13 10 11 12 11C14 11 15 13 15 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">ระบบปรับอากาศ</h3>
+                    <p class="service-description">
+                        ออกแบบและติดตั้งระบบปรับอากาศแบบรวมศูนย์ 
+                        VRF และระบบระบายอากาศที่มีประสิทธิภาพ
+                    </p>
+                    <a href="services.html#hvac" class="service-link">เรียนรู้เพิ่มเติม →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Showcase -->
+    <section class="projects-showcase">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2 class="section-title">โครงการที่ผ่านมา</h2>
+                <p class="section-subtitle">ผลงานที่เราภาคภูมิใจ</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card fade-up">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="200" height="150" fill="#E8F0FE"/>
+                                <path d="M40 75L70 45L100 75L130 45L160 75" stroke="#1E40AF" stroke-width="2" fill="none"/>
+                                <circle cx="70" cy="45" r="3" fill="#1E40AF"/>
+                                <circle cx="130" cy="45" r="3" fill="#1E40AF"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">โรงพยาบาลศูนย์การแพทย์</h3>
+                        <p class="project-category">ระบบไฟฟ้า • ประปา • แอร์</p>
+                        <p class="project-description">
+                            ออกแบบและติดตั้งระบบวิศวกรรมครบวงจรสำหรับโรงพยาบาล 300 เตียง
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="project-card fade-up">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="200" height="150" fill="#E8F0FE"/>
+                                <rect x="50" y="40" width="100" height="70" stroke="#1E40AF" stroke-width="2" fill="none"/>
+                                <line x1="50" y1="75" x2="150" y2="75" stroke="#1E40AF" stroke-width="1"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">อาคารจอดรถอัจฉริยะ</h3>
+                        <p class="project-category">ระบบไฟฟ้า • ระบบควบคุม</p>
+                        <p class="project-description">
+                            ระบบไฟฟ้าและระบบควบคุมอัตโนมัติสำหรับอาคารจอดรถ 800 คัน
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="project-card fade-up">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="200" height="150" fill="#E8F0FE"/>
+                                <circle cx="100" cy="75" r="40" stroke="#1E40AF" stroke-width="2" fill="none"/>
+                                <circle cx="100" cy="75" r="20" fill="#1E40AF"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">มหาวิทยาลัยชั้นนำ</h3>
+                        <p class="project-category">ระบบแอร์ • ระบบประปา</p>
+                        <p class="project-description">
+                            ปรับปรุงระบบปรับอากาศและประปาสำหรับอาคารเรียน 15 หลัง
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-cta fade-up">
+                <a href="projects.html" class="btn btn-primary">ดูผลงานทั้งหมด</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content fade-up">
+                <h2 class="cta-title">พร้อมที่จะเริ่มโครงการของคุณ?</h2>
+                <p class="cta-subtitle">ปรึกษาผู้เชี่ยวชาญของเราได้ฟรี</p>
+                <a href="contact.html" class="btn btn-primary btn-large">ติดต่อเราวันนี้</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-title">SS INTEGRATION</h3>
+                    <p class="footer-text">
+                        ผู้เชี่ยวชาญด้านวิศวกรรมและการติดตั้งระบบอาคาร 
+                        พร้อมให้บริการด้วยมาตรฐานสูงสุด
+                    </p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">บริการ</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#electrical">ระบบไฟฟ้า</a></li>
+                        <li><a href="services.html#plumbing">ระบบประปา</a></li>
+                        <li><a href="services.html#hvac">ระบบปรับอากาศ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">บริษัท</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">เกี่ยวกับเรา</a></li>
+                        <li><a href="projects.html">ผลงาน</a></li>
+                        <li><a href="contact.html">ติดต่อเรา</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">ติดต่อ</h4>
+                    <ul class="footer-contact">
+                        <li>📧 info@ssintegration.com</li>
+                        <li>📱 02-XXX-XXXX</li>
+                        <li>📍 กรุงเทพมหานคร</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 SS INTEGRATION. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

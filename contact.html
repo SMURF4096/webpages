@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ติดต่อ SS INTEGRATION - ปรึกษาโครงการและขอใบเสนอราคา">
+    <title>ติดต่อเรา | SS INTEGRATION</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Wiring Diagram Background -->
+    <div class="wiring-background" id="wiringBg">
+        <svg class="wiring-svg" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+            <g class="circuit-lines">
+                <line x1="0" y1="200" x2="1920" y2="200" class="circuit-line" />
+                <line x1="0" y1="400" x2="1920" y2="400" class="circuit-line" />
+                <line x1="0" y1="600" x2="1920" y2="600" class="circuit-line" />
+                <line x1="400" y1="0" x2="400" y2="1080" class="circuit-line" />
+                <line x1="800" y1="0" x2="800" y2="1080" class="circuit-line" />
+                <line x1="1200" y1="0" x2="1200" y2="1080" class="circuit-line" />
+            </g>
+            <g class="circuit-nodes">
+                <circle cx="400" cy="200" r="4" class="node pulse" />
+                <circle cx="800" cy="400" r="4" class="node pulse" />
+                <circle cx="1200" cy="600" r="4" class="node pulse" />
+            </g>
+        </svg>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">SS INTEGRATION</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">หน้าแรก</a></li>
+                <li><a href="about.html" class="nav-link">เกี่ยวกับเรา</a></li>
+                <li><a href="services.html" class="nav-link">บริการ</a></li>
+                <li><a href="projects.html" class="nav-link">ผลงาน</a></li>
+                <li><a href="contact.html" class="nav-link btn-contact active">ติดต่อเรา</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title fade-in">ติดต่อเรา</h1>
+            <p class="page-subtitle fade-in">พร้อมให้บริการและคำปรึกษาทุกเวลา</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-container fade-up">
+                    <h2 class="contact-form-title">ส่งข้อความถึงเรา</h2>
+                    <p class="contact-form-subtitle">กรอกข้อมูลด้านล่าง เราจะติดต่อกลับโดยเร็วที่สุด</p>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">ชื่อ-นามสกุล *</label>
+                            <input type="text" id="name" name="name" required placeholder="กรุณากรอกชื่อของคุณ">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">อีเมล *</label>
+                                <input type="email" id="email" name="email" required placeholder="example@email.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">เบอร์โทรศัพท์ *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="08X-XXX-XXXX">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">บริษัท/องค์กร</label>
+                            <input type="text" id="company" name="company" placeholder="ชื่อบริษัทของคุณ">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">บริการที่สนใจ</label>
+                            <select id="service" name="service">
+                                <option value="">เลือกบริการ</option>
+                                <option value="electrical">ระบบไฟฟ้า</option>
+                                <option value="plumbing">ระบบประปา</option>
+                                <option value="hvac">ระบบปรับอากาศ</option>
+                                <option value="all">ทุกระบบ</option>
+                                <option value="other">อื่นๆ</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">รายละเอียดโครงการ *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="กรุณาอธิบายโครงการหรือความต้องการของคุณ"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large">ส่งข้อความ</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info-container fade-up">
+                    <div class="contact-info-card">
+                        <h3 class="contact-info-title">ข้อมูลติดต่อ</h3>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="contact-info-text">
+                                <h4>ที่อยู่สำนักงาน</h4>
+                                <p>123 ถนนพระราม 4<br>แขวงคลองเตย เขตคลองเตย<br>กรุงเทพมหานคร 10110</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22 16.92V19.92C22 20.49 21.54 20.97 20.97 20.99C13.94 21.51 7.58 17.77 3.51 12C-0.37 6.89 -0.99 0.78 3.51 0.03C3.94 -0.04 4.38 0.14 4.67 0.48L7.39 3.51C7.78 3.93 7.87 4.56 7.62 5.07L6.13 7.91C5.87 8.43 6.01 9.07 6.46 9.45C8.27 11.03 10.48 12.62 12.54 13.53C13.07 13.77 13.7 13.62 14.08 13.17L16.91 10.13C17.3 9.68 17.93 9.54 18.45 9.8L21.48 11.33C21.9 11.53 22.15 11.98 22.15 12.47V15.92C22.15 16.49 21.69 16.97 21.12 16.99C20.55 17.01 19.98 16.94 19.42 16.92Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="contact-info-text">
+                                <h4>โทรศัพท์</h4>
+                                <p>02-XXX-XXXX<br>08X-XXX-XXXX</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2 7L12 13L22 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="contact-info-text">
+                                <h4>อีเมล</h4>
+                                <p>info@ssintegration.com<br>sales@ssintegration.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="contact-info-text">
+                                <h4>เวลาทำการ</h4>
+                                <p>จันทร์ - ศุกร์: 08:00 - 18:00<br>เสาร์: 09:00 - 15:00<br>อาทิตย์: ปิดทำการ</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Placeholder -->
+                    <div class="map-placeholder fade-up">
+                        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="400" height="300" fill="#E8F0FE"/>
+                            <path d="M150 100 L200 80 L250 100 L250 180 L200 200 L150 180 Z" fill="#1E40AF"/>
+                            <circle cx="200" cy="120" r="15" fill="#DC2626"/>
+                            <path d="M200 120 L200 160" stroke="#DC2626" stroke-width="3"/>
+                            <circle cx="200" cy="165" r="3" fill="#DC2626"/>
+                        </svg>
+                        <p class="map-text">📍 SS INTEGRATION Office</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2 class="section-title">คำถามที่พบบ่อย</h2>
+                <p class="section-subtitle">คำตอบสำหรับคำถามที่ถูกถามบ่อยที่สุด</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item fade-up">
+                    <h3 class="faq-question">ระยะเวลาในการติดตั้งใช้เวลานานเท่าไหร่?</h3>
+                    <p class="faq-answer">
+                        ระยะเวลาการติดตั้งขึ้นอยู่กับขนาดและความซับซ้อนของโครงการ 
+                        โครงการทั่วไปใช้เวลาประมาณ 3-6 เดือน โครงการขนาดใหญ่อาจใช้เวลา 12-24 เดือน
+                    </p>
+                </div>
+                
+                <div class="faq-item fade-up">
+                    <h3 class="faq-question">มีบริการหลังการขายหรือไม่?</h3>
+                    <p class="faq-answer">
+                        มีครับ เรามีทีมบริการหลังการขายพร้อมให้คำปรึกษาและแก้ไขปัญหา 
+                        รวมถึงบริการบำรุงรักษาตามกำหนดเวลา
+                    </p>
+                </div>
+                
+                <div class="faq-item fade-up">
+                    <h3 class="faq-question">รับประกันงานกี่ปี?</h3>
+                    <p class="faq-answer">
+                        เรารับประกันงานติดตั้ง 2 ปี และอุปกรณ์ตามเงื่อนไขของผู้ผลิต 
+                        ซึ่งส่วนใหญ่อยู่ที่ 1-5 ปี ขึ้นอยู่กับประเภทอุปกรณ์
+                    </p>
+                </div>
+                
+                <div class="faq-item fade-up">
+                    <h3 class="faq-question">สามารถขอใบเสนอราคาได้อย่างไร?</h3>
+                    <p class="faq-answer">
+                        คุณสามารถกรอกแบบฟอร์มด้านบน หรือติดต่อเราโดยตรงทางโทรศัพท์หรืออีเมล 
+                        เราจะส่งใบเสนอราคาภายใน 3-5 วันทำการ
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-title">SS INTEGRATION</h3>
+                    <p class="footer-text">
+                        ผู้เชี่ยวชาญด้านวิศวกรรมและการติดตั้งระบบอาคาร 
+                        พร้อมให้บริการด้วยมาตรฐานสูงสุด
+                    </p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">บริการ</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#electrical">ระบบไฟฟ้า</a></li>
+                        <li><a href="services.html#plumbing">ระบบประปา</a></li>
+                        <li><a href="services.html#hvac">ระบบปรับอากาศ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">บริษัท</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">เกี่ยวกับเรา</a></li>
+                        <li><a href="projects.html">ผลงาน</a></li>
+                        <li><a href="contact.html">ติดต่อเรา</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">ติดต่อ</h4>
+                    <ul class="footer-contact">
+                        <li>📧 info@ssintegration.com</li>
+                        <li>📱 02-XXX-XXXX</li>
+                        <li>📍 กรุงเทพมหานคร</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 SS INTEGRATION. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
