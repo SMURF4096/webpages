@@ -1807,6 +1807,60 @@ body.loaded .loader-wrapper {
     font-weight: 500;
 }
 
+/* ========== Scroll to Top Button ========== */
+.scroll-to-top {
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    width: 56px;
+    height: 56px;
+    background: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+    transition: var(--transition-smooth);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+    background: var(--dark-blue);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(30, 64, 175, 0.4);
+}
+
+.scroll-to-top svg {
+    width: 24px;
+    height: 24px;
+}
+
+@media (max-width: 768px) {
+    .scroll-to-top {
+        left: 20px;
+        bottom: 90px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .scroll-to-top svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
 /* ========== Social Float Buttons ========== */
 .social-float {
     position: fixed;
@@ -1842,35 +1896,35 @@ body.loaded .loader-wrapper {
     height: 28px;
 }
 
-.line-btn {
+.social-line {
     background: linear-gradient(135deg, #00B900, #00E600);
 }
 
-.line-btn:hover {
+.social-line:hover {
     background: linear-gradient(135deg, #00E600, #00FF00);
 }
 
-.facebook-btn {
+.social-facebook {
     background: linear-gradient(135deg, #1877F2, #4267B2);
 }
 
-.facebook-btn:hover {
+.social-facebook:hover {
     background: linear-gradient(135deg, #4267B2, #5890FF);
 }
 
-.phone-btn {
+.social-phone {
     background: linear-gradient(135deg, #10B981, #34D399);
 }
 
-.phone-btn:hover {
+.social-phone:hover {
     background: linear-gradient(135deg, #34D399, #6EE7B7);
 }
 
-.email-btn {
+.social-email {
     background: linear-gradient(135deg, #EF4444, #F87171);
 }
 
-.email-btn:hover {
+.social-email:hover {
     background: linear-gradient(135deg, #F87171, #FCA5A5);
 }
 
