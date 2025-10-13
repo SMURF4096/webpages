@@ -7,8 +7,13 @@
     --dark: #353535;
 }
 
-* {
+body, h1, h2, h3, h4, h5, h6, p, a, span, div, button, input, textarea, select, label {
     font-family: 'Noto Sans Thai', 'Inter', sans-serif !important;
+}
+
+/* Preserve icon fonts */
+i, .fa, .fab, .fas, .far, .fal, .bi {
+    font-family: inherit !important;
 }
 
 .fw-medium {
@@ -669,4 +674,16 @@
 
 .container-fluid.bg-light.p-0 small {
     font-size: 12px !important;
+}
+
+/* Fix project page layout - prevent footer overlap */
+.portfolio-container {
+    margin-bottom: 80px !important;
+    padding-bottom: 40px;
+    clear: both;
+    overflow: visible;
+}
+
+.portfolio-container .col-12:last-child {
+    margin-bottom: 60px !important;
 }
