@@ -1225,3 +1225,11 @@ i, .fa, .fab, .fas, .far, .fal, .bi {
 .btn-sm-square[href^="tel"]:hover {
     background-color: #2d8e47 !important;
 }
+
+/* Custom 5-column layout for client logos */
+@media (min-width: 992px) {
+    .col-lg-custom-5 {
+        flex: 0 0 auto;
+        width: 20%; /* 100% / 5 = 20% for 5 columns */
+    }
+}
