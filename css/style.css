@@ -687,3 +687,374 @@ i, .fa, .fab, .fas, .far, .fal, .bi {
 .portfolio-container .col-12:last-child {
     margin-bottom: 60px !important;
 }
+
+/* Enhanced Animated Journey Timeline */
+.journey-timeline {
+    position: relative;
+    padding: 80px 0;
+}
+
+/* Animated curved path with gradient */
+.timeline-path {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.timeline-path::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(180deg, 
+        var(--primary) 0%, 
+        #0891d0 25%, 
+        var(--primary) 50%,
+        #0891d0 75%,
+        var(--primary) 100%);
+    animation: timelineGrow 2s ease-out forwards;
+    box-shadow: 0 0 20px rgba(7, 106, 187, 0.4);
+}
+
+@keyframes timelineGrow {
+    from { height: 0; }
+    to { height: 100%; }
+}
+
+/* Moving light particles on timeline */
+.timeline-path::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 15px var(--primary), 0 0 25px rgba(7, 106, 187, 0.5);
+    animation: particleMove 6s ease-in-out infinite;
+}
+
+@keyframes particleMove {
+    0% { top: 0; opacity: 1; }
+    25% { opacity: 0.7; }
+    50% { top: 50%; opacity: 0.4; }
+    75% { opacity: 0.7; }
+    100% { top: 100%; opacity: 0; }
+}
+
+/* Journey Timeline Item */
+.journey-item {
+    position: relative;
+    margin-bottom: 100px;
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.journey-item.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Alternating left/right layout */
+.journey-item:nth-child(odd) .journey-content {
+    margin-left: auto;
+    padding-left: 90px;
+    text-align: left;
+}
+
+.journey-item:nth-child(even) .journey-content {
+    margin-right: auto;
+    padding-right: 90px;
+    text-align: left;
+}
+
+.journey-content {
+    position: relative;
+    width: 45%;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+}
+
+.journey-content:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 25px 60px rgba(7, 106, 187, 0.15);
+    border-color: var(--primary);
+}
+
+/* Animated milestone badge with 3D effect */
+.milestone-badge {
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, var(--primary) 0%, #0891d0 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 36px;
+    box-shadow: 
+        0 0 0 10px rgba(255,255,255,1),
+        0 0 0 14px rgba(7, 106, 187, 0.2),
+        0 10px 40px rgba(7, 106, 187, 0.4);
+    z-index: 10;
+    animation: badgePulse 3s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+    0%, 100% { 
+        transform: translateX(-50%) scale(1) rotateY(0deg);
+        box-shadow: 
+            0 0 0 10px rgba(255,255,255,1),
+            0 0 0 14px rgba(7, 106, 187, 0.2),
+            0 10px 40px rgba(7, 106, 187, 0.4);
+    }
+    50% { 
+        transform: translateX(-50%) scale(1.15) rotateY(180deg);
+        box-shadow: 
+            0 0 0 15px rgba(255,255,255,1),
+            0 0 0 20px rgba(7, 106, 187, 0.3),
+            0 15px 50px rgba(7, 106, 187, 0.6);
+    }
+}
+
+/* Special highlight badge for important milestones */
+.milestone-badge.highlight {
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #ffd700 100%);
+    animation: highlightGlow 2s ease-in-out infinite;
+    color: var(--dark);
+}
+
+@keyframes highlightGlow {
+    0%, 100% { 
+        box-shadow: 
+            0 0 0 10px rgba(255,255,255,1),
+            0 0 0 14px rgba(255, 215, 0, 0.3),
+            0 10px 40px rgba(255, 215, 0, 0.6);
+        filter: brightness(1);
+    }
+    50% { 
+        box-shadow: 
+            0 0 0 15px rgba(255,255,255,1),
+            0 0 0 20px rgba(255, 215, 0, 0.5),
+            0 15px 60px rgba(255, 215, 0, 0.8);
+        filter: brightness(1.2);
+    }
+}
+
+/* Year label with animation */
+.journey-year {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--primary), #0891d0);
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 18px;
+    box-shadow: 0 5px 15px rgba(7, 106, 187, 0.3);
+    animation: yearFloat 3s ease-in-out infinite;
+}
+
+@keyframes yearFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.journey-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 18px;
+    position: relative;
+    display: inline-block;
+}
+
+.journey-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--primary);
+    transition: width 0.4s ease;
+}
+
+.journey-content:hover .journey-title::after {
+    width: 100%;
+}
+
+.journey-description {
+    color: #555;
+    line-height: 1.9;
+    font-size: 16px;
+}
+
+/* Animated connection lines from badge to content */
+.journey-item:nth-child(odd) .journey-content::before {
+    content: '';
+    position: absolute;
+    right: 100%;
+    top: 50px;
+    width: 70px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--primary));
+    animation: lineGrowRight 1s ease-out forwards;
+}
+
+.journey-item:nth-child(even) .journey-content::before {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 50px;
+    width: 70px;
+    height: 3px;
+    background: linear-gradient(270deg, transparent, var(--primary));
+    animation: lineGrowLeft 1s ease-out forwards;
+}
+
+@keyframes lineGrowRight {
+    from { width: 0; }
+    to { width: 70px; }
+}
+
+@keyframes lineGrowLeft {
+    from { width: 0; }
+    to { width: 70px; }
+}
+
+/* Dot decorator at line end */
+.journey-item:nth-child(odd) .journey-content::after {
+    content: '';
+    position: absolute;
+    right: 100%;
+    top: 47px;
+    width: 8px;
+    height: 8px;
+    background: var(--primary);
+    border-radius: 50%;
+    margin-right: -4px;
+    animation: dotPulse 2s ease-in-out infinite;
+}
+
+.journey-item:nth-child(even) .journey-content::after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 47px;
+    width: 8px;
+    height: 8px;
+    background: var(--primary);
+    border-radius: 50%;
+    margin-left: -4px;
+    animation: dotPulse 2s ease-in-out infinite;
+}
+
+@keyframes dotPulse {
+    0%, 100% { 
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% { 
+        transform: scale(1.5);
+        opacity: 0.7;
+    }
+}
+
+/* Responsive Timeline */
+@media (max-width: 992px) {
+    .timeline-path {
+        left: 40px;
+    }
+    
+    .milestone-badge {
+        left: 40px;
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+    }
+    
+    .journey-content {
+        width: calc(100% - 130px);
+        margin-left: 130px !important;
+        padding: 25px;
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+    }
+    
+    .journey-item:nth-child(odd) .journey-content,
+    .journey-item:nth-child(even) .journey-content {
+        margin-left: 130px !important;
+        margin-right: 0 !important;
+    }
+    
+    .journey-item .journey-content::before,
+    .journey-item .journey-content::after {
+        display: none;
+    }
+    
+    .journey-item {
+        margin-bottom: 70px;
+    }
+}
+
+@media (max-width: 576px) {
+    .timeline-path {
+        left: 30px;
+    }
+    
+    .milestone-badge {
+        left: 30px;
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+    
+    .journey-content {
+        width: calc(100% - 110px);
+        margin-left: 110px !important;
+        padding: 20px;
+    }
+    
+    .journey-title {
+        font-size: 20px;
+    }
+    
+    .journey-description {
+        font-size: 14px;
+    }
+}
+
+/* Lazy loading improvement for client logos */
+.client-logo {
+    will-change: filter, opacity, transform;
+}
+
+/* Smooth fade-in for lazy loaded images */
+.client-logo[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+
+.client-logo[loading="lazy"].loaded,
+.client-logo:not([loading]) {
+    opacity: 0.7;
+}
