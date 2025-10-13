@@ -1058,3 +1058,170 @@ i, .fa, .fab, .fas, .far, .fal, .bi {
 .client-logo:not([loading]) {
     opacity: 0.7;
 }
+
+/* Enhanced Timeline - Thicker and More Modern */
+.timeline-path {
+    width: 8px !important;
+}
+
+.timeline-path::before {
+    width: 100%;
+    background: linear-gradient(180deg, 
+        var(--primary) 0%, 
+        #0891d0 20%, 
+        var(--primary) 40%,
+        #0891d0 60%,
+        var(--primary) 80%,
+        #0dcaf0 100%) !important;
+    box-shadow: 0 0 30px rgba(7, 106, 187, 0.6) !important;
+}
+
+/* Scroll-triggered animations for timeline items */
+.journey-item {
+    opacity: 0;
+    transform: translateY(80px);
+}
+
+.journey-item.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Stagger animation delays */
+.journey-item:nth-child(1).aos-animate { transition-delay: 0.1s; }
+.journey-item:nth-child(2).aos-animate { transition-delay: 0.2s; }
+.journey-item:nth-child(3).aos-animate { transition-delay: 0.3s; }
+.journey-item:nth-child(4).aos-animate { transition-delay: 0.4s; }
+.journey-item:nth-child(5).aos-animate { transition-delay: 0.5s; }
+.journey-item:nth-child(6).aos-animate { transition-delay: 0.6s; }
+.journey-item:nth-child(7).aos-animate { transition-delay: 0.7s; }
+.journey-item:nth-child(8).aos-animate { transition-delay: 0.8s; }
+.journey-item:nth-child(9).aos-animate { transition-delay: 0.9s; }
+
+/* Scroll animations for index.html sections */
+.value-item, .service-card {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out;
+}
+
+.value-item.aos-animate, .service-card.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger delays for multiple items */
+.value-item:nth-child(1).aos-animate { transition-delay: 0.1s; }
+.value-item:nth-child(2).aos-animate { transition-delay: 0.2s; }
+.value-item:nth-child(3).aos-animate { transition-delay: 0.3s; }
+.value-item:nth-child(4).aos-animate { transition-delay: 0.4s; }
+.value-item:nth-child(5).aos-animate { transition-delay: 0.5s; }
+.value-item:nth-child(6).aos-animate { transition-delay: 0.6s; }
+
+.service-card:nth-child(1).aos-animate { transition-delay: 0.15s; }
+.service-card:nth-child(2).aos-animate { transition-delay: 0.3s; }
+.service-card:nth-child(3).aos-animate { transition-delay: 0.45s; }
+.service-card:nth-child(4).aos-animate { transition-delay: 0.6s; }
+.service-card:nth-child(5).aos-animate { transition-delay: 0.75s; }
+.service-card:nth-child(6).aos-animate { transition-delay: 0.9s; }
+
+/* Social Media Brand Colors */
+.btn-social.facebook,
+.btn-social[href*="facebook"] {
+    background-color: #1877f2 !important;
+    border-color: #1877f2 !important;
+}
+
+.btn-social.facebook:hover,
+.btn-social[href*="facebook"]:hover {
+    background-color: #0c63d4 !important;
+    border-color: #0c63d4 !important;
+}
+
+.btn-social.line,
+.btn-social[href*="line"],
+.btn-social[href*="lin.ee"] {
+    background-color: #00b900 !important;
+    border-color: #00b900 !important;
+}
+
+.btn-social.line:hover,
+.btn-social[href*="line"]:hover,
+.btn-social[href*="lin.ee"]:hover {
+    background-color: #009600 !important;
+    border-color: #009600 !important;
+}
+
+.btn-social.email,
+.btn-social[href^="mailto"] {
+    background-color: #ea4335 !important;
+    border-color: #ea4335 !important;
+}
+
+.btn-social.email:hover,
+.btn-social[href^="mailto"]:hover {
+    background-color: #c5221f !important;
+    border-color: #c5221f !important;
+}
+
+.btn-social.phone,
+.btn-social[href^="tel"] {
+    background-color: #34a853 !important;
+    border-color: #34a853 !important;
+}
+
+.btn-social.phone:hover,
+.btn-social[href^="tel"]:hover {
+    background-color: #2d8e47 !important;
+    border-color: #2d8e47 !important;
+}
+
+/* Top bar social buttons */
+.btn-sm-square {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.btn-sm-square[href*="facebook"] {
+    background-color: #1877f2 !important;
+    color: white !important;
+}
+
+.btn-sm-square[href*="facebook"]:hover {
+    background-color: #0c63d4 !important;
+}
+
+.btn-sm-square[href*="line"],
+.btn-sm-square[href*="lin.ee"] {
+    background-color: #00b900 !important;
+    color: white !important;
+}
+
+.btn-sm-square[href*="line"]:hover,
+.btn-sm-square[href*="lin.ee"]:hover {
+    background-color: #009600 !important;
+}
+
+.btn-sm-square[href^="mailto"] {
+    background-color: #ea4335 !important;
+    color: white !important;
+}
+
+.btn-sm-square[href^="mailto"]:hover {
+    background-color: #c5221f !important;
+}
+
+.btn-sm-square[href^="tel"] {
+    background-color: #34a853 !important;
+    color: white !important;
+}
+
+.btn-sm-square[href^="tel"]:hover {
+    background-color: #2d8e47 !important;
+}
