@@ -96,6 +96,31 @@
 
         portfolioIsotope.isotope({filter: $(this).data('filter')});
     });
+
+    // Client Logo Scroll Animation
+    function animateLogosOnScroll() {
+        const logos = document.querySelectorAll('.client-logo');
+        const windowHeight = window.innerHeight;
+        
+        logos.forEach((logo, index) => {
+            const logoTop = logo.getBoundingClientRect().top;
+            
+            // Trigger animation when logo is 80% visible
+            if (logoTop < windowHeight * 0.8) {
+                setTimeout(() => {
+                    logo.classList.add('fade-in');
+                }, index * 50); // Stagger animation by 50ms per logo
+            }
+        });
+    }
+
+    // Run on scroll
+    $(window).on('scroll', animateLogosOnScroll);
+    
+    // Run on page load
+    $(document).ready(function() {
+        animateLogosOnScroll();
+    });
     
 })(jQuery);
 
