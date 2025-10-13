@@ -1,0 +1,4 @@
+Logo	SS Integration				: color = #076abb
+						: fonts = Impact bolt italic
+	Advance Engineering Product & Services	: color = #000000
+						: fonts = cordia bolt italic
