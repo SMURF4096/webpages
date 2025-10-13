@@ -124,3 +124,46 @@
     
 })(jQuery);
 
+
+// Scroll Animation Observer
+(function() {
+    'use strict';
+    
+    // Create Intersection Observer for scroll animations
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+    
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('aos-animate');
+                // Optional: unobserve after animation to prevent re-triggering
+                // observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    // Observe all elements with scroll animation
+    document.addEventListener('DOMContentLoaded', function() {
+        // Timeline items
+        const timelineItems = document.querySelectorAll('.journey-item');
+        timelineItems.forEach(item => observer.observe(item));
+        
+        // Value items (index.html)
+        const valueItems = document.querySelectorAll('.value-item');
+        valueItems.forEach(item => observer.observe(item));
+        
+        // Service cards (index.html)
+        const serviceCards = document.querySelectorAll('.service-card');
+        serviceCards.forEach(item => observer.observe(item));
+        
+        console.log('Scroll animations initialized:', {
+            timeline: timelineItems.length,
+            values: valueItems.length,
+            services: serviceCards.length
+        });
+    });
+})();
