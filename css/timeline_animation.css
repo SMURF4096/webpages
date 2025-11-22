@@ -1,0 +1,109 @@
+/* Timeline Fill Animation */
+.timeline-path {
+    background: #e9ecef;
+    z-index: 0;
+}
+
+.timeline-line-fill {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    margin-left: -2px;
+    background: var(--primary);
+    height: 0%;
+    z-index: 1;
+    transition: height 0.1s linear;
+    border-radius: 2px;
+    box-shadow: 0 0 10px var(--primary);
+}
+
+/* Glowing Head of the Line */
+.timeline-line-fill::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border: 3px solid var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--primary), 0 0 30px var(--primary);
+    z-index: 3;
+}
+
+.timeline-item {
+    z-index: 2;
+}
+
+/* Badge Animation */
+.timeline-item .timeline-badge {
+    background: #fff;
+    border: 3px solid #e9ecef;
+    color: #e9ecef;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: scale(0.8);
+    opacity: 0.7;
+}
+
+.timeline-item.active .timeline-badge {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+    transform: scale(1.2);
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(7, 106, 187, 0.6);
+    animation: icon-pop 0.6s ease-out forwards;
+}
+
+@keyframes icon-pop {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.4);
+    }
+
+    100% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+/* Panel Reveal Animation */
+.timeline-item .timeline-panel {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.timeline-item.active .timeline-panel {
+    opacity: 1;
+    transform: translateY(0);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Staggered content inside panel */
+.timeline-item .timeline-heading,
+.timeline-item .timeline-body {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+    transition-delay: 0.2s;
+}
+
+.timeline-item.active .timeline-heading,
+.timeline-item.active .timeline-body {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .timeline-line-fill {
+        left: 30px;
+    }
+}

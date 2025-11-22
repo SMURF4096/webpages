@@ -2,23 +2,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
+    /* Primary Colors - Modern Engineering Blue Palette */
     --primary: #076abb;
+    --primary-dark: #055a9a;
+    --primary-light: #0891d0;
+    --primary-lighter: #e6f3fb;
+
+    /* Accent Colors */
+    --accent-electric: #00d4ff;
+    --accent-success: #00c853;
+    --accent-warning: #ffa726;
+    --accent-tech: #667eea;
+
+    /* Neutrals */
     --light: #F5F5F5;
+    --lighter: #fafbfc;
     --dark: #353535;
+    --dark-blue: #1a2332;
+    --gray: #6c757d;
+    --gray-light: #e9ecef;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #076abb 0%, #0891d0 100%);
+    --gradient-hero: linear-gradient(135deg, rgba(7, 106, 187, 0.95) 0%, rgba(8, 145, 208, 0.85) 100%);
+    --gradient-card: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    --gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.12);
+    --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.15);
+    --shadow-primary: 0 8px 24px rgba(7, 106, 187, 0.25);
+    --shadow-glow: 0 0 20px rgba(7, 106, 187, 0.3);
+
+    /* Transitions */
+    --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-body, h1, h2, h3, h4, h5, h6, p, a, span, div, button, input, textarea, select, label {
-    font-family: 'Noto Sans Thai', 'Inter', sans-serif !important;
-}
 
-/* Preserve icon fonts */
-i, .fa, .fab, .fas, .far, .fal, .bi {
-    font-family: inherit !important;
-}
-
-.fw-medium {
-    font-weight: 500 !important;
-}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+div,
+button,
+input,
+textarea,
 
 .fw-bold {
     font-weight: 700 !important;
@@ -114,7 +152,7 @@ i, .fa, .fab, .fas, .far, .fal, .bi {
 }
 
 @media (max-width: 991.98px) {
-    .navbar-light .navbar-nav .nav-link  {
+    .navbar-light .navbar-nav .nav-link {
         margin-right: 0;
         padding: 10px 0;
     }
@@ -165,7 +203,7 @@ i, .fa, .fab, .fas, .far, .fal, .bi {
         position: relative;
         min-height: 500px;
     }
-    
+
     .header-carousel .owl-carousel-item img {
         position: absolute;
         width: 100%;
@@ -259,7 +297,7 @@ i, .fa, .fab, .fas, .far, .fal, .bi {
     background-size: cover;
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
     color: var(--light);
 }
 
@@ -304,19 +342,19 @@ i, .fa, .fab, .fas, .far, .fal, .bi {
         max-width: 100% !important;
     }
 
-    .about-text  {
+    .about-text {
         padding-right: calc(((100% - 960px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1200px) {
-    .about-text  {
+    .about-text {
         padding-right: calc(((100% - 1140px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1400px) {
-    .about-text  {
+    .about-text {
         padding-right: calc(((100% - 1320px) / 2) + .75rem);
     }
 }
@@ -338,19 +376,19 @@ i, .fa, .fab, .fas, .far, .fal, .bi {
         max-width: 100% !important;
     }
 
-    .feature-text  {
+    .feature-text {
         padding-left: calc(((100% - 960px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1200px) {
-    .feature-text  {
+    .feature-text {
         padding-left: calc(((100% - 1140px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1400px) {
-    .feature-text  {
+    .feature-text {
         padding-left: calc(((100% - 1320px) / 2) + .75rem);
     }
 }
@@ -414,19 +452,19 @@ i, .fa, .fab, .fas, .far, .fal, .bi {
         max-width: 100% !important;
     }
 
-    .quote-text  {
+    .quote-text {
         padding-right: calc(((100% - 960px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1200px) {
-    .quote-text  {
+    .quote-text {
         padding-right: calc(((100% - 1140px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1400px) {
-    .quote-text  {
+    .quote-text {
         padding-right: calc(((100% - 1320px) / 2) + .75rem);
     }
 }
@@ -492,6 +530,7 @@ i, .fa, .fab, .fas, .far, .fal, .bi {
 }
 
 @media (min-width: 768px) {
+
     .testimonial-carousel::before,
     .testimonial-carousel::after {
         width: 200px;
@@ -499,6 +538,7 @@ i, .fa, .fab, .fas, .far, .fal, .bi {
 }
 
 @media (min-width: 992px) {
+
     .testimonial-carousel::before,
     .testimonial-carousel::after {
         width: 300px;
@@ -553,19 +593,19 @@ i, .fa, .fab, .fas, .far, .fal, .bi {
         max-width: 100% !important;
     }
 
-    .contact-text  {
+    .contact-text {
         padding-left: calc(((100% - 960px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1200px) {
-    .contact-text  {
+    .contact-text {
         padding-left: calc(((100% - 1140px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1400px) {
-    .contact-text  {
+    .contact-text {
         padding-left: calc(((100% - 1320px) / 2) + .75rem);
     }
 }
@@ -632,6 +672,7 @@ i, .fa, .fab, .fas, .far, .fal, .bi {
 .footer .copyright a:hover {
     color: var(--primary);
 }
+
 /* Client Logo Styles */
 .client-logo {
     width: 100%;
@@ -640,7 +681,7 @@ i, .fa, .fab, .fas, .far, .fal, .bi {
     padding: 15px;
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     opacity: 0;
     transform: translateY(30px);
@@ -713,19 +754,24 @@ i, .fa, .fab, .fas, .far, .fal, .bi {
     left: 0;
     width: 100%;
     height: 0;
-    background: linear-gradient(180deg, 
-        var(--primary) 0%, 
-        #0891d0 25%, 
-        var(--primary) 50%,
-        #0891d0 75%,
-        var(--primary) 100%);
+    background: linear-gradient(180deg,
+            var(--primary) 0%,
+            #0891d0 25%,
+            var(--primary) 50%,
+            #0891d0 75%,
+            var(--primary) 100%);
     animation: timelineGrow 2s ease-out forwards;
     box-shadow: 0 0 20px rgba(7, 106, 187, 0.4);
 }
 
 @keyframes timelineGrow {
-    from { height: 0; }
-    to { height: 100%; }
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 100%;
+    }
 }
 
 /* Moving light particles on timeline */
@@ -744,11 +790,28 @@ i, .fa, .fab, .fas, .far, .fal, .bi {
 }
 
 @keyframes particleMove {
-    0% { top: 0; opacity: 1; }
-    25% { opacity: 0.7; }
-    50% { top: 50%; opacity: 0.4; }
-    75% { opacity: 0.7; }
-    100% { top: 100%; opacity: 0; }
+    0% {
+        top: 0;
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0.7;
+    }
+
+    50% {
+        top: 50%;
+        opacity: 0.4;
+    }
+
+    75% {
+        opacity: 0.7;
+    }
+
+    100% {
+        top: 100%;
+        opacity: 0;
+    }
 }
 
 /* Journey Timeline Item */
@@ -784,7 +847,7 @@ i, .fa, .fab, .fas, .far, .fal, .bi {
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     padding: 35px;
     border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
     transition: all 0.4s ease;
     border: 2px solid transparent;
 }
@@ -810,8 +873,8 @@ i, .fa, .fab, .fas, .far, .fal, .bi {
     justify-content: center;
     color: #fff;
     font-size: 36px;
-    box-shadow: 
-        0 0 0 10px rgba(255,255,255,1),
+    box-shadow:
+        0 0 0 10px rgba(255, 255, 255, 1),
         0 0 0 14px rgba(7, 106, 187, 0.2),
         0 10px 40px rgba(7, 106, 187, 0.4);
     z-index: 10;
@@ -819,17 +882,20 @@ i, .fa, .fab, .fas, .far, .fal, .bi {
 }
 
 @keyframes badgePulse {
-    0%, 100% { 
+
+    0%,
+    100% {
         transform: translateX(-50%) scale(1) rotateY(0deg);
-        box-shadow: 
-            0 0 0 10px rgba(255,255,255,1),
+        box-shadow:
+            0 0 0 10px rgba(255, 255, 255, 1),
             0 0 0 14px rgba(7, 106, 187, 0.2),
             0 10px 40px rgba(7, 106, 187, 0.4);
     }
-    50% { 
+
+    50% {
         transform: translateX(-50%) scale(1.15) rotateY(180deg);
-        box-shadow: 
-            0 0 0 15px rgba(255,255,255,1),
+        box-shadow:
+            0 0 0 15px rgba(255, 255, 255, 1),
             0 0 0 20px rgba(7, 106, 187, 0.3),
             0 15px 50px rgba(7, 106, 187, 0.6);
     }
@@ -843,16 +909,19 @@ i, .fa, .fab, .fas, .far, .fal, .bi {
 }
 
 @keyframes highlightGlow {
-    0%, 100% { 
-        box-shadow: 
-            0 0 0 10px rgba(255,255,255,1),
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 0 10px rgba(255, 255, 255, 1),
             0 0 0 14px rgba(255, 215, 0, 0.3),
             0 10px 40px rgba(255, 215, 0, 0.6);
         filter: brightness(1);
     }
-    50% { 
-        box-shadow: 
-            0 0 0 15px rgba(255,255,255,1),
+
+    50% {
+        box-shadow:
+            0 0 0 15px rgba(255, 255, 255, 1),
             0 0 0 20px rgba(255, 215, 0, 0.5),
             0 15px 60px rgba(255, 215, 0, 0.8);
         filter: brightness(1.2);
@@ -874,8 +943,15 @@ i, .fa, .fab, .fas, .far, .fal, .bi {
 }
 
 @keyframes yearFloat {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
 }
 
 .journey-title {
@@ -932,13 +1008,23 @@ i, .fa, .fab, .fas, .far, .fal, .bi {
 }
 
 @keyframes lineGrowRight {
-    from { width: 0; }
-    to { width: 70px; }
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 70px;
+    }
 }
 
 @keyframes lineGrowLeft {
-    from { width: 0; }
-    to { width: 70px; }
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 70px;
+    }
 }
 
 /* Dot decorator at line end */
@@ -969,11 +1055,14 @@ i, .fa, .fab, .fas, .far, .fal, .bi {
 }
 
 @keyframes dotPulse {
-    0%, 100% { 
+
+    0%,
+    100% {
         transform: scale(1);
         opacity: 1;
     }
-    50% { 
+
+    50% {
         transform: scale(1.5);
         opacity: 0.7;
     }
@@ -984,14 +1073,14 @@ i, .fa, .fab, .fas, .far, .fal, .bi {
     .timeline-path {
         left: 40px;
     }
-    
+
     .milestone-badge {
         left: 40px;
         width: 70px;
         height: 70px;
         font-size: 28px;
     }
-    
+
     .journey-content {
         width: calc(100% - 130px);
         margin-left: 130px !important;
@@ -999,18 +1088,18 @@ i, .fa, .fab, .fas, .far, .fal, .bi {
         padding-left: 25px !important;
         padding-right: 25px !important;
     }
-    
+
     .journey-item:nth-child(odd) .journey-content,
     .journey-item:nth-child(even) .journey-content {
         margin-left: 130px !important;
         margin-right: 0 !important;
     }
-    
+
     .journey-item .journey-content::before,
     .journey-item .journey-content::after {
         display: none;
     }
-    
+
     .journey-item {
         margin-bottom: 70px;
     }
@@ -1020,24 +1109,24 @@ i, .fa, .fab, .fas, .far, .fal, .bi {
     .timeline-path {
         left: 30px;
     }
-    
+
     .milestone-badge {
         left: 30px;
         width: 60px;
         height: 60px;
         font-size: 24px;
     }
-    
+
     .journey-content {
         width: calc(100% - 110px);
         margin-left: 110px !important;
         padding: 20px;
     }
-    
+
     .journey-title {
         font-size: 20px;
     }
-    
+
     .journey-description {
         font-size: 14px;
     }
@@ -1066,13 +1155,13 @@ i, .fa, .fab, .fas, .far, .fal, .bi {
 
 .timeline-path::before {
     width: 100%;
-    background: linear-gradient(180deg, 
-        var(--primary) 0%, 
-        #0891d0 20%, 
-        var(--primary) 40%,
-        #0891d0 60%,
-        var(--primary) 80%,
-        #0dcaf0 100%) !important;
+    background: linear-gradient(180deg,
+            var(--primary) 0%,
+            #0891d0 20%,
+            var(--primary) 40%,
+            #0891d0 60%,
+            var(--primary) 80%,
+            #0dcaf0 100%) !important;
     box-shadow: 0 0 30px rgba(7, 106, 187, 0.6) !important;
 }
 
@@ -1089,42 +1178,104 @@ i, .fa, .fab, .fas, .far, .fal, .bi {
 }
 
 /* Stagger animation delays */
-.journey-item:nth-child(1).aos-animate { transition-delay: 0.1s; }
-.journey-item:nth-child(2).aos-animate { transition-delay: 0.2s; }
-.journey-item:nth-child(3).aos-animate { transition-delay: 0.3s; }
-.journey-item:nth-child(4).aos-animate { transition-delay: 0.4s; }
-.journey-item:nth-child(5).aos-animate { transition-delay: 0.5s; }
-.journey-item:nth-child(6).aos-animate { transition-delay: 0.6s; }
-.journey-item:nth-child(7).aos-animate { transition-delay: 0.7s; }
-.journey-item:nth-child(8).aos-animate { transition-delay: 0.8s; }
-.journey-item:nth-child(9).aos-animate { transition-delay: 0.9s; }
+.journey-item:nth-child(1).aos-animate {
+    transition-delay: 0.1s;
+}
+
+.journey-item:nth-child(2).aos-animate {
+    transition-delay: 0.2s;
+}
+
+.journey-item:nth-child(3).aos-animate {
+    transition-delay: 0.3s;
+}
+
+.journey-item:nth-child(4).aos-animate {
+    transition-delay: 0.4s;
+}
+
+.journey-item:nth-child(5).aos-animate {
+    transition-delay: 0.5s;
+}
+
+.journey-item:nth-child(6).aos-animate {
+    transition-delay: 0.6s;
+}
+
+.journey-item:nth-child(7).aos-animate {
+    transition-delay: 0.7s;
+}
+
+.journey-item:nth-child(8).aos-animate {
+    transition-delay: 0.8s;
+}
+
+.journey-item:nth-child(9).aos-animate {
+    transition-delay: 0.9s;
+}
 
 /* Scroll animations for index.html sections */
-.value-item, .service-card {
+.value-item,
+.service-card {
     opacity: 0;
     transform: translateY(50px);
     transition: all 0.6s ease-out;
 }
 
-.value-item.aos-animate, .service-card.aos-animate {
+.value-item.aos-animate,
+.service-card.aos-animate {
     opacity: 1;
     transform: translateY(0);
 }
 
 /* Stagger delays for multiple items */
-.value-item:nth-child(1).aos-animate { transition-delay: 0.1s; }
-.value-item:nth-child(2).aos-animate { transition-delay: 0.2s; }
-.value-item:nth-child(3).aos-animate { transition-delay: 0.3s; }
-.value-item:nth-child(4).aos-animate { transition-delay: 0.4s; }
-.value-item:nth-child(5).aos-animate { transition-delay: 0.5s; }
-.value-item:nth-child(6).aos-animate { transition-delay: 0.6s; }
+.value-item:nth-child(1).aos-animate {
+    transition-delay: 0.1s;
+}
 
-.service-card:nth-child(1).aos-animate { transition-delay: 0.15s; }
-.service-card:nth-child(2).aos-animate { transition-delay: 0.3s; }
-.service-card:nth-child(3).aos-animate { transition-delay: 0.45s; }
-.service-card:nth-child(4).aos-animate { transition-delay: 0.6s; }
-.service-card:nth-child(5).aos-animate { transition-delay: 0.75s; }
-.service-card:nth-child(6).aos-animate { transition-delay: 0.9s; }
+.value-item:nth-child(2).aos-animate {
+    transition-delay: 0.2s;
+}
+
+.value-item:nth-child(3).aos-animate {
+    transition-delay: 0.3s;
+}
+
+.value-item:nth-child(4).aos-animate {
+    transition-delay: 0.4s;
+}
+
+.value-item:nth-child(5).aos-animate {
+    transition-delay: 0.5s;
+}
+
+.value-item:nth-child(6).aos-animate {
+    transition-delay: 0.6s;
+}
+
+.service-card:nth-child(1).aos-animate {
+    transition-delay: 0.15s;
+}
+
+.service-card:nth-child(2).aos-animate {
+    transition-delay: 0.3s;
+}
+
+.service-card:nth-child(3).aos-animate {
+    transition-delay: 0.45s;
+}
+
+.service-card:nth-child(4).aos-animate {
+    transition-delay: 0.6s;
+}
+
+.service-card:nth-child(5).aos-animate {
+    transition-delay: 0.75s;
+}
+
+.service-card:nth-child(6).aos-animate {
+    transition-delay: 0.9s;
+}
 
 /* Social Media Brand Colors */
 .btn-social.facebook,
@@ -1230,6 +1381,916 @@ i, .fa, .fab, .fas, .far, .fal, .bi {
 @media (min-width: 992px) {
     .col-lg-custom-5 {
         flex: 0 0 auto;
-        width: 20%; /* 100% / 5 = 20% for 5 columns */
+        width: 20%;
+        /* 100% / 5 = 20% for 5 columns */
+    }
+}
+
+/* =========================================
+   Modern Design System Enhancements
+   ========================================= */
+
+/* 1. Glassmorphism Utilities */
+.glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+    background: rgba(26, 35, 50, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* 2. Text Gradients & Typography */
+.text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-gradient-gold {
+    background: linear-gradient(135deg, #ffd700 0%, #ffb700 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.heading-lg {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+/* 3. Modern Card Styles */
+.card-modern {
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-bounce);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.card-modern:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+    border-color: rgba(7, 106, 187, 0.2);
+}
+
+.card-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.card-modern:hover::before {
+    transform: scaleX(1);
+}
+
+/* 4. Service Cards Enhanced */
+.service-item {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-base);
+    height: 100%;
+    position: relative;
+}
+
+.service-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.service-item .overflow-hidden {
+    position: relative;
+}
+
+.service-item .overflow-hidden::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-overlay);
+    opacity: 0;
+    transition: var(--transition-base);
+}
+
+.service-item:hover .overflow-hidden::after {
+    opacity: 1;
+}
+
+/* 5. Modern Buttons */
+.btn-modern {
+    background: var(--gradient-primary);
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: var(--shadow-primary);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: var(--transition-base);
+}
+
+.btn-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0891d0 0%, #076abb 100%);
+    z-index: -1;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.btn-modern:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(7, 106, 187, 0.4);
+    color: white;
+}
+
+.btn-modern:hover::before {
+    opacity: 1;
+}
+
+/* 6. Feature Icons */
+.feature-icon-box {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-lighter);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: var(--transition-bounce);
+    position: relative;
+}
+
+.feature-icon-box i {
+    font-size: 32px;
+    color: var(--primary);
+    transition: var(--transition-base);
+}
+
+.feature-item:hover .feature-icon-box {
+    background: var(--gradient-primary);
+    transform: rotate(5deg);
+}
+
+.feature-item:hover .feature-icon-box i {
+    color: white;
+    transform: scale(1.2);
+}
+
+/* 7. Parallax & Backgrounds */
+.bg-engineering-pattern {
+    background-color: #f8f9fa;
+    background-image: radial-gradient(#076abb 0.5px, transparent 0.5px), radial-gradient(#076abb 0.5px, #f8f9fa 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    opacity: 0.8;
+}
+
+.section-overlay {
+    position: relative;
+}
+
+.section-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: -1;
+}
+
+/* 8. Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(7, 106, 187, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 20px rgba(7, 106, 187, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(7, 106, 187, 0);
+    }
+}
+
+.pulse-effect {
+    animation: pulse-glow 2s infinite;
+}
+
+/* 9. Stats Counter */
+.counter-box {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    border-bottom: 4px solid var(--primary);
+    transition: var(--transition-base);
+}
+
+.counter-box:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.counter-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+/* 10. Footer Modernization */
+.footer-modern {
+    background: var(--dark-blue);
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: relative;
+}
+
+.service-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.service-item .overflow-hidden {
+    position: relative;
+}
+
+.service-item .overflow-hidden::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-overlay);
+    opacity: 0;
+    transition: var(--transition-base);
+}
+
+.service-item:hover .overflow-hidden::after {
+    opacity: 1;
+}
+
+/* 5. Modern Buttons */
+.btn-modern {
+    background: var(--gradient-primary);
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: var(--shadow-primary);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: var(--transition-base);
+}
+
+.btn-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0891d0 0%, #076abb 100%);
+    z-index: -1;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.btn-modern:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(7, 106, 187, 0.4);
+    color: white;
+}
+
+.btn-modern:hover::before {
+    opacity: 1;
+}
+
+/* 6. Feature Icons */
+.feature-icon-box {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-lighter);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: var(--transition-bounce);
+    position: relative;
+}
+
+.feature-icon-box i {
+    font-size: 32px;
+    color: var(--primary);
+    transition: var(--transition-base);
+}
+
+.feature-item:hover .feature-icon-box {
+    background: var(--gradient-primary);
+    transform: rotate(5deg);
+}
+
+.feature-item:hover .feature-icon-box i {
+    color: white;
+    transform: scale(1.2);
+}
+
+/* 7. Parallax & Backgrounds */
+.bg-engineering-pattern {
+    background-color: #f8f9fa;
+    background-image: radial-gradient(#076abb 0.5px, transparent 0.5px), radial-gradient(#076abb 0.5px, #f8f9fa 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    opacity: 0.8;
+}
+
+.section-overlay {
+    position: relative;
+}
+
+.section-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: -1;
+}
+
+/* 8. Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(7, 106, 187, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 20px rgba(7, 106, 187, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(7, 106, 187, 0);
+    }
+}
+
+.pulse-effect {
+    animation: pulse-glow 2s infinite;
+}
+
+/* 9. Stats Counter */
+.counter-box {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    border-bottom: 4px solid var(--primary);
+    transition: var(--transition-base);
+}
+
+.counter-box:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.counter-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+/* 10. Footer Modernization */
+.footer-modern {
+    background: var(--dark-blue);
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--gradient-primary);
+}
+
+/* 11. Scroll Progress Bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: var(--gradient-primary);
+    z-index: 99999;
+    transition: width 0.1s;
+}
+
+/* =========================================
+   12. Hero Shapes Animation
+   ========================================= */
+.hero-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.shape {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    backdrop-filter: blur(5px);
+}
+
+.shape-1 {
+    width: 300px;
+    height: 300px;
+    top: -50px;
+    left: -50px;
+    animation: float-1 10s infinite ease-in-out;
+}
+
+.shape-2 {
+    width: 200px;
+    height: 200px;
+    bottom: 10%;
+    right: 10%;
+    background: rgba(0, 185, 142, 0.1);
+    animation: float-2 12s infinite ease-in-out;
+}
+
+.shape-3 {
+    width: 100px;
+    height: 100px;
+    top: 40%;
+    left: 40%;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-bounce);
+    height: 100%;
+}
+
+.capability-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    background: var(--light);
+}
+
+.capability-item i {
+    transition: transform 0.3s ease;
+}
+
+.capability-item:hover i {
+    transform: scale(1.2);
+    color: var(--primary-dark) !important;
+}
+
+/* =========================================
+   14. Micro-interactions
+color: var(--primary);
+    transition: var(--transition-base);
+}
+
+.feature-item:hover .feature-icon-box {
+    background: var(--gradient-primary);
+    transform: rotate(5deg);
+}
+
+.feature-item:hover .feature-icon-box i {
+    color: white;
+    transform: scale(1.2);
+}
+
+/* 7. Parallax & Backgrounds */
+.bg-engineering-pattern {
+    background-color: #f8f9fa;
+    background-image: radial-gradient(#076abb 0.5px, transparent 0.5px), radial-gradient(#076abb 0.5px, #f8f9fa 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    opacity: 0.8;
+}
+
+.section-overlay {
+    position: relative;
+}
+
+.section-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: -1;
+}
+
+/* 8. Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(7, 106, 187, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 20px rgba(7, 106, 187, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(7, 106, 187, 0);
+    }
+}
+
+.pulse-effect {
+    animation: pulse-glow 2s infinite;
+}
+
+/* 9. Stats Counter */
+.counter-box {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    border-bottom: 4px solid var(--primary);
+    transition: var(--transition-base);
+}
+
+.counter-box:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.counter-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+/* 10. Footer Modernization */
+.footer-modern {
+    background: var(--dark-blue);
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--gradient-primary);
+}
+
+/* 11. Scroll Progress Bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: var(--gradient-primary);
+    z-index: 99999;
+    transition: width 0.1s;
+}
+
+/* =========================================
+   12. Hero Shapes Animation
+   ========================================= */
+.hero-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.shape {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    backdrop-filter: blur(5px);
+}
+
+.shape-1 {
+    width: 300px;
+    height: 300px;
+    top: -50px;
+    left: -50px;
+    animation: float-1 10s infinite ease-in-out;
+}
+
+.shape-2 {
+    width: 200px;
+    height: 200px;
+    bottom: 10%;
+    right: 10%;
+    background: rgba(0, 185, 142, 0.1);
+    animation: float-2 12s infinite ease-in-out;
+}
+
+.shape-3 {
+    width: 100px;
+    height: 100px;
+    top: 40%;
+    left: 40%;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-bounce);
+    height: 100%;
+}
+
+.capability-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    background: var(--light);
+}
+
+.capability-item i {
+    transition: transform 0.3s ease;
+}
+
+.capability-item:hover i {
+    transform: scale(1.2);
+    color: var(--primary-dark) !important;
+}
+
+/* =========================================
+   14. Micro-interactions
+   ========================================= */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* =========================================
+   15. Timeline Section
+   ========================================= */
+.journey-timeline {
+    position: relative;
+}
+
+.timeline-path {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    margin-left: -2px;
+    background: linear-gradient(to bottom, var(--primary), var(--secondary));
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 60px;
+    width: 50%;
+    padding-right: 40px;
+    text-align: right;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-badge {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px rgba(7, 106, 187, 0.5);
+}
+
+.timeline-item:hover .timeline-panel {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-left: 5px solid var(--primary);
+}
+
+.timeline-item:nth-child(even) {
+    margin-left: 50%;
+    padding-left: 40px;
+    padding-right: 0;
+    text-align: left;
+}
+
+.timeline-item:nth-child(even):hover .timeline-panel {
+    border-left: none;
+    border-right: 5px solid var(--primary);
+}
+
+.timeline-badge {
+    position: absolute;
+    right: -25px;
+    top: 16px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    z-index: 100;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: pulse-badge 2s infinite;
+}
+
+@keyframes pulse-badge {
+    0% {
+        box-shadow: 0 0 0 0 rgba(7, 106, 187, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(7, 106, 187, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(7, 106, 187, 0);
+    }
+}
+
+.timeline-item:nth-child(even) .timeline-badge {
+    right: auto;
+    left: -25px;
+}
+
+.timeline-panel {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.timeline-panel:before {
+    content: '';
+    position: absolute;
+    top: 26px;
+    right: -10px;
+    border-top: 10px solid transparent;
+    border-left: 10px solid #fff;
+    border-bottom: 10px solid transparent;
+    transition: border-left-color 0.3s ease;
+}
+
+.timeline-item:nth-child(even) .timeline-panel:before {
+    right: auto;
+    left: -10px;
+    border-left: none;
+    border-right: 10px solid #fff;
+    transition: border-right-color 0.3s ease;
+}
+
+.timeline-title {
+    margin-top: 0;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .timeline-path {
+        left: 30px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 0;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+
+    .timeline-item:nth-child(even) {
+        margin-left: 0;
+        padding-left: 80px;
+    }
+
+    .timeline-badge {
+        left: 5px !important;
+        right: auto !important;
+    }
+
+    .timeline-panel:before {
+        display: none;
     }
 }

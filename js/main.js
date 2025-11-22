@@ -10,8 +10,8 @@
         }, 1);
     };
     spinner();
-    
-    
+
+
     // Initiate the wowjs
     new WOW().init();
 
@@ -24,8 +24,8 @@
             $('.sticky-top').removeClass('shadow-sm').css('top', '-100px');
         }
     });
-    
-    
+
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
@@ -35,8 +35,20 @@
         }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
         return false;
+    });
+
+
+    // Scroll Progress Bar
+    $(window).scroll(function () {
+        var scrollTop = $(window).scrollTop();
+        var docHeight = $(document).height();
+        var winHeight = $(window).height();
+        var scrollPercent = (scrollTop) / (docHeight - winHeight);
+        var scrollPercentRounded = Math.round(scrollPercent * 100);
+
+        $('.scroll-progress').css('width', scrollPercentRounded + '%');
     });
 
 
@@ -54,8 +66,8 @@
         items: 1,
         dots: true,
         loop: true,
-        nav : true,
-        navText : [
+        nav: true,
+        navText: [
             '<i class="bi bi-chevron-left"></i>',
             '<i class="bi bi-chevron-right"></i>'
         ]
@@ -69,17 +81,17 @@
         center: true,
         dots: false,
         loop: true,
-        nav : true,
-        navText : [
+        nav: true,
+        navText: [
             '<i class="bi bi-arrow-left"></i>',
             '<i class="bi bi-arrow-right"></i>'
         ],
         responsive: {
-            0:{
-                items:1
+            0: {
+                items: 1
             },
-            768:{
-                items:2
+            768: {
+                items: 2
             }
         }
     });
@@ -94,17 +106,17 @@
         $("#portfolio-flters li").removeClass('active');
         $(this).addClass('active');
 
-        portfolioIsotope.isotope({filter: $(this).data('filter')});
+        portfolioIsotope.isotope({ filter: $(this).data('filter') });
     });
 
     // Client Logo Scroll Animation
     function animateLogosOnScroll() {
         const logos = document.querySelectorAll('.client-logo');
         const windowHeight = window.innerHeight;
-        
+
         logos.forEach((logo, index) => {
             const logoTop = logo.getBoundingClientRect().top;
-            
+
             // Trigger animation when logo is 80% visible
             if (logoTop < windowHeight * 0.8) {
                 setTimeout(() => {
@@ -116,54 +128,59 @@
 
     // Run on scroll
     $(window).on('scroll', animateLogosOnScroll);
-    
-    // Run on page load
-    $(document).ready(function() {
-        animateLogosOnScroll();
-    });
-    
-})(jQuery);
 
+    // Timeline Animation
+    function updateTimeline() {
+        const timeline = document.querySelector('.journey-timeline');
+        const lineFill = document.querySelector('.timeline-line-fill');
+        const items = document.querySelectorAll('.timeline-item');
 
-// Scroll Animation Observer
-(function() {
-    'use strict';
-    
-    // Create Intersection Observer for scroll animations
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
-    
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('aos-animate');
-                // Optional: unobserve after animation to prevent re-triggering
-                // observer.unobserve(entry.target);
+        if (!timeline || !lineFill) return;
+
+        const timelineRect = timeline.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        // Start drawing when the timeline top enters the bottom 80% of the screen
+        const startOffset = windowHeight * 0.8;
+
+        // Calculate scroll progress
+        let start = timelineRect.top;
+        let totalHeight = timeline.offsetHeight;
+
+        // Calculate how many pixels of the timeline are "past" the trigger point
+        let scrolledPast = startOffset - start;
+
+        // Percentage (0 to 100)
+        let percentage = (scrolledPast / totalHeight) * 100;
+        percentage = Math.max(0, Math.min(100, percentage));
+
+        lineFill.style.height = percentage + '%';
+
+        // Trigger items based on the line position
+        // The line "head" is at 'percentage' down the timeline
+        const lineHeadY = timelineRect.top + (totalHeight * (percentage / 100));
+
+        items.forEach(item => {
+            const itemRect = item.getBoundingClientRect();
+            // Trigger when the line head passes the center of the item's badge (approx top + 25px)
+            const itemTriggerPoint = itemRect.top + 25;
+
+            if (lineHeadY >= itemTriggerPoint) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
             }
         });
-    }, observerOptions);
-    
-    // Observe all elements with scroll animation
-    document.addEventListener('DOMContentLoaded', function() {
-        // Timeline items
-        const timelineItems = document.querySelectorAll('.journey-item');
-        timelineItems.forEach(item => observer.observe(item));
-        
-        // Value items (index.html)
-        const valueItems = document.querySelectorAll('.value-item');
-        valueItems.forEach(item => observer.observe(item));
-        
-        // Service cards (index.html)
-        const serviceCards = document.querySelectorAll('.service-card');
-        serviceCards.forEach(item => observer.observe(item));
-        
-        console.log('Scroll animations initialized:', {
-            timeline: timelineItems.length,
-            values: valueItems.length,
-            services: serviceCards.length
-        });
+    }
+
+    // Event Listeners for Timeline
+    window.addEventListener('scroll', updateTimeline);
+    window.addEventListener('load', updateTimeline);
+
+    // Run on page load
+    $(document).ready(function () {
+        animateLogosOnScroll();
+        updateTimeline();
     });
-})();
+
+})(jQuery);

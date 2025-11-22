@@ -14,7 +14,9 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -32,7 +34,13 @@
     <link href="css/style.css" rel="stylesheet">
     <style>
         /* Critical CSS fixes */
-        i, .fa, .fab, .fas, .far, .fal, .bi {
+        i,
+        .fa,
+        .fab,
+        .fas,
+        .far,
+        .fal,
+        .bi {
             font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "bootstrap-icons" !important;
             font-weight: 900;
         }
@@ -40,8 +48,11 @@
 </head>
 
 <body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -55,7 +66,8 @@
             <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
                     <small class="fa fa-map-marker-alt text-primary me-2"></small>
-                    <small>40/14 อาคารบางนาทาวเวอร์ ซี หมู่ที่ 12 ถนนบางนา-ตราด ตำบลบางแก้ว อำเภอบางพลี จ.สมุทรปราการ 10540</small>
+                    <small>40/14 อาคารบางนาทาวเวอร์ ซี หมู่ที่ 12 ถนนบางนา-ตราด ตำบลบางแก้ว อำเภอบางพลี จ.สมุทรปราการ
+                        10540</small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center py-3">
                     <small class="far fa-clock text-primary me-2"></small>
@@ -68,10 +80,14 @@
                     <small>+66(0) 2 751-9100-2</small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.facebook.com/ssintegration"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://lin.ee/YOUR_LINE_ID"><i class="fab fa-line"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href="mailto:Estimate@ssintegration.co.th"><i class="fa fa-envelope"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-0" href="tel:0275191002"><i class="fa fa-phone"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1"
+                        href="https://www.facebook.com/ssintegration"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://lin.ee/YOUR_LINE_ID"><i
+                            class="fab fa-line"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1"
+                        href="mailto:Estimate@ssintegration.co.th"><i class="fa fa-envelope"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-0" href="tel:0275191002"><i
+                            class="fa fa-phone"></i></a>
                 </div>
             </div>
         </div>
@@ -91,62 +107,97 @@
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.html" class="nav-item nav-link active">หน้าหลัก</a>
                 <a href="about.html" class="nav-item nav-link">เกี่ยวกับเรา</a>
-                <a href="service.html" class="nav-item nav-link">บริการ</a>
+                <a href="service.html" class="nav-item nav-link">บริการของเรา</a>
                 <a href="project.html" class="nav-item nav-link">โครงการ</a>
                 <a href="contact.html" class="nav-item nav-link">ติดต่อเรา</a>
             </div>
-            <a href="contact.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">ติดต่อเรา<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="quote.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">ขอใบเสนอราคา<i
+                    class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
 
-
-    <!-- Carousel Start -->
     <div class="container-fluid p-0 pb-5">
         <div class="owl-carousel header-carousel position-relative">
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/carousel-1.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
+                <img class="img-fluid" src="img/carousel-1.png" alt="">
+                <!-- Hero Shapes Animation -->
+                <div class="hero-shapes d-none">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                    style="background: linear-gradient(to right, rgba(6, 3, 21, 0.7), rgba(6, 3, 21, 0));">
                     <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-lg-8 text-center">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">บริษัท เอส เอส อินทีเกรชัน จำกัด</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">Advance Engineering Product & Services</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">ผู้เชี่ยวชาญด้านระบบไฟฟ้า ระบบปรับอากาศ และระบบสุขาภิบาล มุ่งมั่นส่งมอบบริการคุณภาพระดับมืออาชีพ</p>
-                                <a href="about.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">เกี่ยวกับเรา</a>
-                                <a href="contact.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">ติดต่อเรา</a>
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">
+                                    ผู้เชี่ยวชาญด้านวิศวกรรมระบบประกอบอาคาร</h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">
+                                    บริการออกแบบและติดตั้งระบบไฟฟ้าครบวงจร</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">เรามุ่งมั่นส่งมอบงานคุณภาพตามมาตรฐานสากล
+                                    ด้วยทีมวิศวกรมืออาชีพที่มีประสบการณ์</p>
+                                <a href="service.html"
+                                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">อ่านเพิ่มเติม</a>
+                                <a href="quote.html"
+                                    class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">ขอใบเสนอราคา</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/carousel-2.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
+                <img class="img-fluid" src="img/carousel-2.png" alt="">
+                <!-- Hero Shapes Animation -->
+                <div class="hero-shapes d-none">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                    style="background: linear-gradient(to right, rgba(6, 3, 21, 0.7), rgba(6, 3, 21, 0));">
                     <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-lg-8 text-center">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">บริษัท เอส เอส อินทีเกรชัน จำกัด</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">Advance Engineering Product & Services</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">ผู้เชี่ยวชาญด้านระบบไฟฟ้า ระบบปรับอากาศ และระบบสุขาภิบาล มุ่งมั่นส่งมอบบริการคุณภาพระดับมืออาชีพ</p>
-                                <a href="about.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">เกี่ยวกับเรา</a>
-                                <a href="contact.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">ติดต่อเรา</a>
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">
+                                    ระบบปรับอากาศและระบายอากาศ (HVAC)</h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">
+                                    โซลูชั่นเพื่อการประหยัดพลังงานและอากาศบริสุทธิ์</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">ออกแบบและติดตั้งระบบ HVAC
+                                    ที่มีประสิทธิภาพสูง สำหรับอาคารพาณิชย์และโรงงานอุตสาหกรรม</p>
+                                <a href="service.html"
+                                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">อ่านเพิ่มเติม</a>
+                                <a href="quote.html"
+                                    class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">ขอใบเสนอราคา</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/carousel-3.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
+                <img class="img-fluid" src="img/carousel-3.png" alt="">
+                <!-- Hero Shapes Animation -->
+                <div class="hero-shapes d-none">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                    style="background: linear-gradient(to right, rgba(6, 3, 21, 0.7), rgba(6, 3, 21, 0));">
                     <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-lg-8 text-center">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">บริษัท เอส เอส อินทีเกรชัน จำกัด</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">Advance Engineering Product & Services</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">ผู้เชี่ยวชาญด้านระบบไฟฟ้า ระบบปรับอากาศ และระบบสุขาภิบาล มุ่งมั่นส่งมอบบริการคุณภาพระดับมืออาชีพ</p>
-                                <a href="about.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">เกี่ยวกับเรา</a>
-                                <a href="contact.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">ติดต่อเรา</a>
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">
+                                    ระบบสุขาภิบาลและป้องกันอัคคีภัย</h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">
+                                    ความปลอดภัยและสุขอนามัยคือหัวใจสำคัญ</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">ติดตั้งระบบประปาและดับเพลิงที่ได้มาตรฐาน
+                                    เพื่อความปลอดภัยสูงสุดของผู้ใช้อาคาร</p>
+                                <a href="service.html"
+                                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">อ่านเพิ่มเติม</a>
+                                <a href="quote.html"
+                                    class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">ขอใบเสนอราคา</a>
                             </div>
                         </div>
                     </div>
@@ -163,45 +214,48 @@
             <div class="row g-5">
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
                     <div class="d-flex align-items-center justify-content-between mb-2">
-                        <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
-                            <i class="fa fa-user-check fa-2x text-primary"></i>
+                        <div class="d-flex align-items-center justify-content-center bg-light"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-hard-hat fa-2x text-primary"></i>
                         </div>
                         <h1 class="display-1 text-light mb-0">01</h1>
                     </div>
-                    <h5>Creative Designers</h5>
+                    <h5>Professional Team</h5>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
                     <div class="d-flex align-items-center justify-content-between mb-2">
-                        <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
-                            <i class="fa fa-check fa-2x text-primary"></i>
+                        <div class="d-flex align-items-center justify-content-center bg-light"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-certificate fa-2x text-primary"></i>
                         </div>
                         <h1 class="display-1 text-light mb-0">02</h1>
                     </div>
-                    <h5>Quality Products</h5>
+                    <h5>Quality Standards</h5>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
                     <div class="d-flex align-items-center justify-content-between mb-2">
-                        <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
+                        <div class="d-flex align-items-center justify-content-center bg-light"
+                            style="width: 60px; height: 60px;">
                             <i class="fa fa-drafting-compass fa-2x text-primary"></i>
                         </div>
                         <h1 class="display-1 text-light mb-0">03</h1>
                     </div>
-                    <h5>Free Consultation</h5>
+                    <h5>Engineering Design</h5>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
                     <div class="d-flex align-items-center justify-content-between mb-2">
-                        <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
-                            <i class="fa fa-headphones fa-2x text-primary"></i>
+                        <div class="d-flex align-items-center justify-content-center bg-light"
+                            style="width: 60px; height: 60px;">
+                            <i class="fa fa-headset fa-2x text-primary"></i>
                         </div>
                         <h1 class="display-1 text-light mb-0">04</h1>
                     </div>
-                    <h5>Customer Support</h5>
+                    <h5>24/7 Support</h5>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Feature Start -->
-
+    <!-- Feature End -->
 
 
     <!-- About Start -->
@@ -210,40 +264,45 @@
             <div class="row g-0 mx-lg-0">
                 <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/about.jpg" style="object-fit: cover;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/about.png"
+                            style="object-fit: cover;" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
                     <div class="p-lg-5 pe-lg-0">
                         <div class="section-title text-start">
-                            <h1 class="display-5 mb-4">About Us</h1>
+                            <h1 class="display-5 mb-4">เกี่ยวกับเรา</h1>
                         </div>
-                        <p class="mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
+                        <p class="mb-4 pb-2">บริษัท เอส เอส อินทีเกรชัน จำกัด
+                            ผู้เชี่ยวชาญด้านการออกแบบและติดตั้งระบบวิศวกรรมประกอบอาคาร (MEP)
+                            ด้วยประสบการณ์ยาวนานและทีมงานมืออาชีพ</p>
                         <div class="row g-4 mb-4 pb-2">
                             <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="d-flex align-items-center">
-                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
+                                        style="width: 60px; height: 60px;">
                                         <i class="fa fa-users fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-3">
-                                        <h2 class="text-primary mb-1" data-toggle="counter-up">1234</h2>
+                                        <h2 class="text-primary mb-1" data-toggle="counter-up">100</h2>
                                         <p class="fw-medium mb-0">Happy Clients</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
                                 <div class="d-flex align-items-center">
-                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
+                                        style="width: 60px; height: 60px;">
                                         <i class="fa fa-check fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-3">
-                                        <h2 class="text-primary mb-1" data-toggle="counter-up">1234</h2>
+                                        <h2 class="text-primary mb-1" data-toggle="counter-up">200</h2>
                                         <p class="fw-medium mb-0">Projects Done</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <a href="" class="btn btn-primary py-3 px-5">Explore More</a>
+                        <a href="about.html" class="btn btn-primary py-3 px-5">ข้อมูลเพิ่มเติม</a>
                     </div>
                 </div>
             </div>
@@ -262,72 +321,75 @@
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/service-1.jpg" alt="">
+                            <img class="img-fluid" src="img/service-1.png" alt="">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">General Carpentry</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <h4 class="mb-3">Electrical Systems</h4>
+                            <p>Complete electrical design, installation, and maintenance for commercial and industrial
+                                buildings.</p>
+                            <a class="fw-medium" href="service.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/service-2.jpg" alt="">
+                            <img class="img-fluid" src="img/service-2.png" alt="">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Furniture Manufacturing</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <h4 class="mb-3">HVAC Systems</h4>
+                            <p>Energy-efficient heating, ventilation, and air conditioning solutions for optimal climate
+                                control.</p>
+                            <a class="fw-medium" href="service.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/service-3.jpg" alt="">
+                            <img class="img-fluid" src="img/service-3.png" alt="">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Furniture Remodeling</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <h4 class="mb-3">Plumbing Systems</h4>
+                            <p>Professional plumbing and sanitary system design and installation services.</p>
+                            <a class="fw-medium" href="service.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/service-4.jpg" alt="">
+                            <img class="img-fluid" src="img/service-4.png" alt="">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Wooden Floor</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <h4 class="mb-3">BAS / BMS</h4>
+                            <p>Smart Building Automation Systems for integrated control and monitoring.</p>
+                            <a class="fw-medium" href="service.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/service-5.jpg" alt="">
+                            <img class="img-fluid" src="img/service-5.png" alt="">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Wooden Furniture</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <h4 class="mb-3">Maintenance</h4>
+                            <p>Comprehensive maintenance services to ensure your systems operate at peak efficiency.</p>
+                            <a class="fw-medium" href="service.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/service-6.jpg" alt="">
+                            <img class="img-fluid" src="img/service-6.png" alt="">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Custom Work</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <h4 class="mb-3">Engineering Consulting</h4>
+                            <p>Professional engineering consultation for system design, energy efficiency, and project
+                                planning.</p>
+                            <a class="fw-medium" href="service.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -341,38 +403,43 @@
     <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
         <div class="container feature px-lg-0">
             <div class="row g-0 mx-lg-0">
-                <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.1s">
                     <div class="p-lg-5 ps-lg-0">
                         <div class="section-title text-start">
-                            <h1 class="display-5 mb-4">Why Choose Us</h1>
+                            <h1 class="display-5 mb-4">Why Choose Us!</h1>
                         </div>
-                        <p class="mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
+                        <p class="mb-4 pb-2">We provide comprehensive engineering solutions with a focus on quality,
+                            safety, and efficiency. Our team of experts is dedicated to delivering the best results for
+                            your projects.</p>
                         <div class="row g-4">
                             <div class="col-6">
                                 <div class="d-flex align-items-center">
-                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
+                                        style="width: 60px; height: 60px;">
                                         <i class="fa fa-check fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-4">
                                         <p class="mb-2">Quality</p>
-                                        <h5 class="mb-0">Services</h5>
+                                        <h5 class="mb-0">International Standards</h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="d-flex align-items-center">
-                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
+                                        style="width: 60px; height: 60px;">
                                         <i class="fa fa-user-check fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-4">
-                                        <p class="mb-2">Creative</p>
-                                        <h5 class="mb-0">Designers</h5>
+                                        <p class="mb-2">Professional</p>
+                                        <h5 class="mb-0">Expert Engineers</h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="d-flex align-items-center">
-                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
+                                        style="width: 60px; height: 60px;">
                                         <i class="fa fa-drafting-compass fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-4">
@@ -383,12 +450,13 @@
                             </div>
                             <div class="col-6">
                                 <div class="d-flex align-items-center">
-                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
+                                        style="width: 60px; height: 60px;">
                                         <i class="fa fa-headphones fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-4">
-                                        <p class="mb-2">Customer</p>
-                                        <h5 class="mb-0">Support</h5>
+                                        <p class="mb-2">Support</p>
+                                        <h5 class="mb-0">After-sales Service</h5>
                                     </div>
                                 </div>
                             </div>
@@ -397,7 +465,8 @@
                 </div>
                 <div class="col-lg-6 pe-lg-0" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/feature.jpg" style="object-fit: cover;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/feature.png"
+                            style="object-fit: cover;" alt="">
                     </div>
                 </div>
             </div>
@@ -416,8 +485,9 @@
                 <div class="col-12 text-center">
                     <ul class="list-inline mb-5" id="portfolio-flters">
                         <li class="mx-2 active" data-filter="*">All</li>
-                        <li class="mx-2" data-filter=".first">General Carpentry</li>
-                        <li class="mx-2" data-filter=".second">Custom Carpentry</li>
+                        <li class="mx-2" data-filter=".first">Electrical</li>
+                        <li class="mx-2" data-filter=".second">HVAC</li>
+                        <li class="mx-2" data-filter=".third">Plumbing</li>
                     </ul>
                 </div>
             </div>
@@ -425,90 +495,96 @@
                 <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
                     <div class="rounded overflow-hidden">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="">
+                            <img class="img-fluid w-100" src="img/portfolio-1.png" alt="">
                             <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-1.png"
+                                    data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                                 <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
-                            <p class="text-primary fw-medium mb-2">General Carpentry</p>
-                            <h5 class="lh-base mb-0">Wooden Furniture Manufacturing And Remodeling</a>
+                            <p class="text-primary fw-medium mb-2">Electrical</p>
+                            <h5 class="lh-base mb-0">Commercial Building Wiring</h5>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
                     <div class="rounded overflow-hidden">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/portfolio-2.jpg" alt="">
+                            <img class="img-fluid w-100" src="img/portfolio-2.png" alt="">
                             <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-2.png"
+                                    data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                                 <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
-                            <p class="text-primary fw-medium mb-2">Custom Carpentry</p>
-                            <h5 class="lh-base mb-0">Wooden Furniture Manufacturing And Remodeling</a>
+                            <p class="text-primary fw-medium mb-2">HVAC</p>
+                            <h5 class="lh-base mb-0">Industrial Ventilation System</h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-4 col-md-6 portfolio-item third wow fadeInUp" data-wow-delay="0.5s">
                     <div class="rounded overflow-hidden">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/portfolio-3.jpg" alt="">
+                            <img class="img-fluid w-100" src="img/portfolio-3.png" alt="">
                             <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-3.png"
+                                    data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                                 <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
-                            <p class="text-primary fw-medium mb-2">General Carpentry</p>
-                            <h5 class="lh-base mb-0">Wooden Furniture Manufacturing And Remodeling</a>
+                            <p class="text-primary fw-medium mb-2">Plumbing</p>
+                            <h5 class="lh-base mb-0">Luxury Hotel Plumbing</h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
                     <div class="rounded overflow-hidden">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/portfolio-4.jpg" alt="">
+                            <img class="img-fluid w-100" src="img/portfolio-4.png" alt="">
                             <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-4.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-4.png"
+                                    data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                                 <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
-                            <p class="text-primary fw-medium mb-2">Custom Carpentry</p>
-                            <h5 class="lh-base mb-0">Wooden Furniture Manufacturing And Remodeling</a>
+                            <p class="text-primary fw-medium mb-2">Electrical</p>
+                            <h5 class="lh-base mb-0">Data Center Power Systems</h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
                     <div class="rounded overflow-hidden">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/portfolio-5.jpg" alt="">
+                            <img class="img-fluid w-100" src="img/portfolio-5.png" alt="">
                             <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-5.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-5.png"
+                                    data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                                 <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
-                            <p class="text-primary fw-medium mb-2">General Carpentry</p>
-                            <h5 class="lh-base mb-0">Wooden Furniture Manufacturing And Remodeling</a>
+                            <p class="text-primary fw-medium mb-2">HVAC</p>
+                            <h5 class="lh-base mb-0">Hospital Air Filtration</h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-4 col-md-6 portfolio-item third wow fadeInUp" data-wow-delay="0.5s">
                     <div class="rounded overflow-hidden">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/portfolio-6.jpg" alt="">
+                            <img class="img-fluid w-100" src="img/portfolio-6.png" alt="">
                             <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-6.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-6.png"
+                                    data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                                 <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
-                            <p class="text-primary fw-medium mb-2">Custom Carpentry</p>
-                            <h5 class="lh-base mb-0">Wooden Furniture Manufacturing And Remodeling</a>
+                            <p class="text-primary fw-medium mb-2">Plumbing</p>
+                            <h5 class="lh-base mb-0">Shopping Mall Sanitary System</h5>
                         </div>
                     </div>
                 </div>
@@ -524,39 +600,48 @@
             <div class="row g-0 mx-lg-0">
                 <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/quote.jpg" style="object-fit: cover;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/quote.png"
+                            style="object-fit: cover;" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 quote-text py-5 wow fadeIn" data-wow-delay="0.5s">
                     <div class="p-lg-5 pe-lg-0">
                         <div class="section-title text-start">
-                            <h1 class="display-5 mb-4">Free Quote</h1>
+                            <h1 class="display-5 mb-4">Request A Free Quote</h1>
                         </div>
-                        <p class="mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
+                        <p class="mb-4 pb-2">Get a free consultation and estimate for your
+                            engineering project. Our
+                            team
+                            of experts is ready to assist you.</p>
                         <form>
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
+                                    <input type="text" class="form-control border-0" placeholder="Your Name"
+                                        style="height: 55px;">
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <input type="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
+                                    <input type="email" class="form-control border-0" placeholder="Your Email"
+                                        style="height: 55px;">
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Your Mobile" style="height: 55px;">
+                                    <input type="text" class="form-control border-0" placeholder="Your Mobile"
+                                        style="height: 55px;">
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <select class="form-select border-0" style="height: 55px;">
                                         <option selected>Select A Service</option>
-                                        <option value="1">Service 1</option>
-                                        <option value="2">Service 2</option>
-                                        <option value="3">Service 3</option>
+                                        <option value="1">Electrical</option>
+                                        <option value="2">HVAC</option>
+                                        <option value="3">Plumbing</option>
+                                        <option value="4">BAS/BMS</option>
                                     </select>
                                 </div>
                                 <div class="col-12">
                                     <textarea class="form-control border-0" placeholder="Special Note"></textarea>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Submit
+                                        Request</button>
                                 </div>
                             </div>
                         </form>
@@ -572,17 +657,17 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="section-title text-center">
-                <h1 class="display-5 mb-5">Team Members</h1>
+                <h1 class="display-5 mb-5">Our Team Members</h1>
             </div>
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item">
                         <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="img/team-1.jpg" alt="">
+                            <img class="img-fluid" src="img/team-1.png" alt="">
                             <div class="team-social">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-line"></i></a>
-                                <a class="btn btn-square" href=""><i class="fa fa-envelope"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                         <div class="text-center border border-5 border-light border-top-0 p-4">
@@ -594,11 +679,11 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item">
                         <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="img/team-2.jpg" alt="">
+                            <img class="img-fluid" src="img/team-2.png" alt="">
                             <div class="team-social">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-line"></i></a>
-                                <a class="btn btn-square" href=""><i class="fa fa-envelope"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                         <div class="text-center border border-5 border-light border-top-0 p-4">
@@ -610,11 +695,11 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item">
                         <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="img/team-3.jpg" alt="">
+                            <img class="img-fluid" src="img/team-3.png" alt="">
                             <div class="team-social">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-line"></i></a>
-                                <a class="btn btn-square" href=""><i class="fa fa-envelope"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                         <div class="text-center border border-5 border-light border-top-0 p-4">
@@ -626,11 +711,11 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item">
                         <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="img/team-4.jpg" alt="">
+                            <img class="img-fluid" src="img/team-4.png" alt="">
                             <div class="team-social">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-line"></i></a>
-                                <a class="btn btn-square" href=""><i class="fa fa-envelope"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                         <div class="text-center border border-5 border-light border-top-0 p-4">
@@ -648,36 +733,12 @@
     <!-- Testimonial Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
-            <div class="section-title text-center">
-                <h1 class="display-5 mb-5">Testimonial</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel">
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light p-2 mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 90px; height: 90px;">
-                    <div class="testimonial-text text-center p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Client Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light p-2 mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 90px; height: 90px;">
-                    <div class="testimonial-text text-center p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Client Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light p-2 mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 90px; height: 90px;">
-                    <div class="testimonial-text text-center p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Client Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-            </div>
+            <h5 class="mb-1">Client Name</h5>
+            <span class="fst-italic">Profession</span>
         </div>
+    </div>
+    </div>
+    </div>
     </div>
     <!-- Testimonial End -->
 
@@ -688,14 +749,20 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">ที่อยู่</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>40/14 อาคารบางนาทาวเวอร์ ซี หมู่ที่ 12 ถนนบางนา-ตราด ตำบลบางแก้ว อำเภอบางพลี จ.สมุทรปราการ 10540</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>40/14 อาคารบางนาทาวเวอร์ ซี หมู่ที่
+                        12
+                        ถนนบางนา-ตราด ตำบลบางแก้ว อำเภอบางพลี จ.สมุทรปราการ 10540</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+66(0) 2 751-9100-2</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>Estimate@ssintegration.co.th</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/ssintegration"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://lin.ee/YOUR_LINE_ID"><i class="fab fa-line"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="mailto:Estimate@ssintegration.co.th"><i class="fa fa-envelope"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="tel:0275191002"><i class="fa fa-phone"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/ssintegration"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://lin.ee/YOUR_LINE_ID"><i
+                                class="fab fa-line"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="mailto:Estimate@ssintegration.co.th"><i
+                                class="fa fa-envelope"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="tel:0275191002"><i
+                                class="fa fa-phone"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -726,11 +793,206 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">บริษัท เอส เอส อินทีเกรชัน จำกัด</a>, All Right Reserved.
+                        &copy; <a class="border-bottom" href="#">บริษัท เอส เอส อินทีเกรชัน จำกัด</a>, All Right
+                        Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <div class="col-12 col-sm-6">
+        <input type="text" class="form-control border-0" placeholder="Your Mobile" style="height: 55px;">
+    </div>
+    <div class="col-12 col-sm-6">
+        <select class="form-select border-0" style="height: 55px;">
+            <option selected>Select A Service</option>
+            <option value="1">Electrical</option>
+            <option value="2">HVAC</option>
+            <option value="3">Plumbing</option>
+            <option value="4">BAS/BMS</option>
+        </select>
+    </div>
+    <div class="col-12">
+        <textarea class="form-control border-0" placeholder="Special Note"></textarea>
+    </div>
+    <div class="col-12">
+        <button class="btn btn-primary w-100 py-3" type="submit">Submit
+            Request</button>
+    </div>
+    </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- Quote End -->
+
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="section-title text-center">
+                <h1 class="display-5 mb-5">Our Team Members</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item">
+                        <div class="overflow-hidden position-relative">
+                            <img class="img-fluid" src="img/team-1.png" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center border border-5 border-light border-top-0 p-4">
+                            <h5 class="mb-0">Full Name</h5>
+                            <small>Designation</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item">
+                        <div class="overflow-hidden position-relative">
+                            <img class="img-fluid" src="img/team-2.png" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center border border-5 border-light border-top-0 p-4">
+                            <h5 class="mb-0">Full Name</h5>
+                            <small>Designation</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item">
+                        <div class="overflow-hidden position-relative">
+                            <img class="img-fluid" src="img/team-3.png" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center border border-5 border-light border-top-0 p-4">
+                            <h5 class="mb-0">Full Name</h5>
+                            <small>Designation</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item">
+                        <div class="overflow-hidden position-relative">
+                            <img class="img-fluid" src="img/team-4.png" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center border border-5 border-light border-top-0 p-4">
+                            <h5 class="mb-0">Full Name</h5>
+                            <small>Designation</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <h5 class="mb-1">Client Name</h5>
+            <span class="fst-italic">Profession</span>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">ที่อยู่</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>40/14 อาคารบางนาทาวเวอร์ ซี หมู่ที่
+                        12
+                        ถนนบางนา-ตราด ตำบลบางแก้ว อำเภอบางพลี จ.สมุทรปราการ 10540</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+66(0) 2 751-9100-2</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>Estimate@ssintegration.co.th</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/ssintegration"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://lin.ee/YOUR_LINE_ID"><i
+                                class="fab fa-line"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="mailto:Estimate@ssintegration.co.th"><i
+                                class="fa fa-envelope"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="tel:0275191002"><i
+                                class="fa fa-phone"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">บริการของเรา</h4>
+                    <a class="btn btn-link" href="service.html">ระบบไฟฟ้า</a>
+                    <a class="btn btn-link" href="service.html">ระบบปรับอากาศ (HVAC)</a>
+                    <a class="btn btn-link" href="service.html">ระบบสุขาภิบาล (Plumbing)</a>
+                    <a class="btn btn-link" href="service.html">ระบบ BMS</a>
+                    <a class="btn btn-link" href="service.html">บริการบำรุงรักษา</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">ลิงก์ด่วน</h4>
+                    <a class="btn btn-link" href="about.html">เกี่ยวกับเรา</a>
+                    <a class="btn btn-link" href="contact.html">ติดต่อเรา</a>
+                    <a class="btn btn-link" href="service.html">บริการของเรา</a>
+                    <a class="btn btn-link" href="project.html">โครงการ</a>
+                    <a class="btn btn-link" href="index.html">หน้าหลัก</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">เวลาทำการ</h4>
+                    <p><i class="far fa-clock me-3"></i>จันทร์ - ศุกร์: 8:00-17:00</p>
+                    <p class="mb-4">ติดต่อเราเพื่อรับคำปรึกษาและใบเสนอราคาฟรี</p>
+                    <a href="contact.html" class="btn btn-primary py-2 px-4">ติดต่อเรา</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">บริษัท เอส เอส อินทีเกรชัน จำกัด</a>, All Right
+                        Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+
                     </div>
                 </div>
             </div>
@@ -756,6 +1018,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/cookie-consent.js"></script>
 </body>
 
 </html>
