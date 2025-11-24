@@ -66,6 +66,8 @@
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
                     <small class="fa fa-phone-alt text-primary me-2"></small>
                     <small>+66(0) 2 751-9100-2</small>
+                    <small class="fa fa-fax text-primary ms-4 me-2"></small>
+                    <small>+66(0)2 751-9103</small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center">
                     <a class="btn btn-sm-square bg-white text-primary me-1"
@@ -131,11 +133,11 @@
                         <div class="col-6 col-md-4 col-lg-custom-5"><img src="img/clients/Hospital/Bangkok_H.svg"
                                 class="img-fluid client-logo" loading="lazy" alt="โรงพยาบาลกรุงเทพ"></div>
                         <div class="col-6 col-md-4 col-lg-custom-5"><img src="img/clients/Hospital/BangkokCM_H.svg"
-                                class="img-fluid client-logo" loading="lazy" alt="โรงพยาบาลกรุงเทพคริสเตียน"></div>
+                                class="img-fluid client-logo" loading="lazy" alt="โรงพยาบาลกรุงเทพเชียงใหม่"></div>
                         <div class="col-6 col-md-4 col-lg-custom-5"><img src="img/clients/Hospital/BangkokRCSM_H.svg"
-                                class="img-fluid client-logo" loading="lazy" alt="โรงพยาบาลกรุงเทพ รังสิต"></div>
+                                class="img-fluid client-logo" loading="lazy" alt="โรงพยาบาลกรุงเทพราชสีมา"></div>
                         <div class="col-6 col-md-4 col-lg-custom-5"><img src="img/clients/Hospital/BangkokT_H.svg"
-                                class="img-fluid client-logo" loading="lazy" alt="โรงพยาบาลกรุงเทพธนบุรี"></div>
+                                class="img-fluid client-logo" loading="lazy" alt="โรงพยาบาลกรุงเทพตราด"></div>
                         <div class="col-6 col-md-4 col-lg-custom-5"><img src="img/clients/Hospital/BangkokRY_H.webp"
                                 class="img-fluid client-logo" loading="lazy" alt="โรงพยาบาลกรุงเทพระยอง"></div>
                         <div class="col-6 col-md-4 col-lg-custom-5"><img src="img/clients/Hospital/BNH_H.svg"
@@ -315,6 +317,7 @@
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>40/14 อาคารบางนาทาวเวอร์ ซี หมู่ที่ 12
                         ถนนบางนา-ตราด ตำบลบางแก้ว อำเภอบางพลี จ.สมุทรปราการ 10540</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+66(0) 2 751-9100-2</p>
+                    <p class="mb-2"><i class="fa fa-fax me-3"></i>+66(0)2 751-9103</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>Estimate@ssintegration.co.th</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/ssintegration"><i
@@ -377,39 +380,50 @@
     <!-- Project Details Modal -->
     <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title" id="projectModalLabel">Project Details</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+            <div class="modal-content border-0 shadow-lg rounded-3 overflow-hidden">
+                <div class="modal-header border-0 p-4 bg-white position-relative justify-content-center">
+                    <img id="projectModalLogo" src="" alt="Client Logo" style="height: 60px; object-fit: contain;">
+                    <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-5 text-center">
-                            <img id="projectModalImage" src="" class="img-fluid rounded mb-3" alt="Project Logo"
-                                style="max-height: 200px;">
+                <div class="modal-body p-0">
+                    <div class="row g-0">
+                        <div class="col-md-5 bg-light d-flex align-items-center justify-content-center p-4">
+                            <div class="bg-white p-3 rounded shadow-sm w-100 text-center">
+                                <img id="projectModalImage" src="" class="img-fluid" alt="Project Logo"
+                                    style="max-height: 150px; object-fit: contain;">
+                            </div>
                         </div>
-                        <div class="col-md-7">
-                            <h4 id="projectModalName" class="text-primary mb-3"></h4>
-                            <p><strong>Project Value:</strong> <span id="projectModalValue"></span></p>
-                            <p><strong>Scope of Work:</strong></p>
-                            <ul id="projectModalScope" class="list-unstyled">
+                        <div class="col-md-7 p-4 p-lg-5">
+                            <h4 id="projectModalName" class="mb-3 fw-bold"></h4>
+                            <div class="mb-4">
+                                <span class="badge bg-primary-soft text-primary mb-2">Project Value</span>
+                                <h5 id="projectModalValue" class="mb-0"></h5>
+                            </div>
+
+                            <h6 class="text-uppercase text-muted mb-3" style="font-size: 0.8rem; letter-spacing: 1px;">
+                                Scope of Work</h6>
+                            <ul id="projectModalScope" class="list-unstyled mb-4">
                                 <!-- Scope items will be populated here -->
                             </ul>
-                            <p id="projectModalDescription" class="text-muted mt-3"></p>
+
+                            <div class="border-top pt-3">
+                                <p id="projectModalDescription" class="text-muted small mb-0"></p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
 
     <script src="js/main.js"></script>
-    <script src="js/cookie-consent.js"></script>
     <script src="js/project-popup.js"></script>
+    <script src="js/cookie-consent.js"></script>
+    <script src="js/cursor-effect.js"></script>
 </body>
+
+<!-- Cursor Effect Canvas -->
+<canvas id="cursor-canvas"></canvas>
 
 </html>
