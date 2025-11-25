@@ -2398,19 +2398,7 @@ color: var(--primary);
     transition: all 0.3s ease;
 }
 
-/* Cursor Effect Canvas */
-#cursor-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    /* Behind everything */
-    pointer-events: none;
-    /* Allow clicking through */
-    opacity: 0.6;
-}
+/* Cursor Effect Canvas - REMOVED */
 
 .modal-header .btn-close:hover {
     background-color: rgba(0, 0, 0, 0.1);
@@ -2569,4 +2557,428 @@ color: var(--primary);
     background: var(--primary);
     height: 0%;
     transition: height 0.1s linear;
+}
+
+/* =========================================
+   Mobile Optimization
+   ========================================= */
+@media (max-width: 768px) {
+
+    /* Adjust container padding to prevent cramping */
+    .container,
+    .container-fluid {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    /* Reduce font sizes for headings */
+    h1.display-1,
+    h1.display-2,
+    h1.display-3 {
+        font-size: 2.5rem !important;
+    }
+
+    h1.display-5 {
+        font-size: 2rem !important;
+    }
+
+    /* Hero Banner Mobile Adjustments */
+    .hero-glass-card {
+        padding: 2rem !important;
+        margin-top: 2rem;
+        transform: none !important;
+        /* Remove skew on mobile for better fit */
+        border-radius: 15px !important;
+        border-left: 3px solid var(--primary);
+    }
+
+    .hero-glass-card>* {
+        transform: none !important;
+    }
+
+    .header-carousel .owl-carousel-item {
+        min-height: 600px;
+        /* Ensure enough height for content */
+    }
+
+    .header-carousel .owl-carousel-item img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Prevent images from being too large */
+    .img-fluid {
+        max-height: 500px;
+        /* Cap height for general images */
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* Specific fix for client logos in grid */
+    .client-logo {
+        max-height: 80px !important;
+        width: auto !important;
+        margin-bottom: 1rem;
+    }
+
+    /* Timeline Mobile Adjustments */
+    .timeline-year {
+        font-size: 4rem;
+    }
+
+    .timeline-caption {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+
+    .timeline-desc {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+}
+
+/* =========================================
+   Premium Modal Styles
+   ========================================= */
+.shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.bg-primary-soft {
+    background-color: rgba(7, 106, 187, 0.1);
+}
+
+/* Ensure modal backdrop is blurred */
+.modal-backdrop.show {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Carousel Control Styling */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+    background-size: 50%;
+}
+
+/* =========================================
+   Redesign: Hero Banner & Typography
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap');
+
+:root {
+    --font-primary: 'Outfit', sans-serif;
+}
+
+.display-2 {
+    font-family: var(--font-primary);
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+.fw-black {
+    font-weight: 900 !important;
+}
+
+.tracking-wider {
+    letter-spacing: 2px;
+}
+
+.hero-glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 5px solid var(--primary);
+    border-radius: 0 20px 20px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: skewX(-5deg);
+}
+
+.hero-glass-card>* {
+    transform: skewX(5deg);
+    /* Counter-skew content */
+}
+
+/* =========================================
+   Redesign: Sticky Scroll Timeline
+   ========================================= */
+.timeline-scroll-container {
+    position: relative;
+    height: 400vh;
+    /* 4 screens tall for scrolling */
+    background: #000;
+}
+
+.timeline-sticky-wrapper {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Background Images Layer */
+.timeline-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 10s ease;
+    transform: scale(1);
+    z-index: 1;
+}
+
+.timeline-bg.active {
+    opacity: 0.4;
+    /* Dimmed for text readability */
+    transform: scale(1.1);
+    /* Slow zoom effect */
+}
+
+/* Content Overlay Layer */
+.timeline-content-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.timeline-text-item {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.timeline-text-item.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-year {
+    font-family: var(--font-primary);
+    font-size: 8rem;
+    font-weight: 900;
+    line-height: 1;
+    background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-caption {
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.timeline-desc {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Progress Bar */
+.timeline-progress {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 200px;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 3;
+}
+
+.timeline-progress-bar {
+    width: 100%;
+    background: var(--primary);
+    height: 0%;
+    transition: height 0.1s linear;
+}
+
+/* =========================================
+   Mobile Optimization
+   ========================================= */
+@media (max-width: 768px) {
+
+    /* Adjust container padding to prevent cramping */
+    .container,
+    .container-fluid {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    /* Reduce font sizes for headings */
+    h1.display-1,
+    h1.display-2,
+    h1.display-3 {
+        font-size: 2.5rem !important;
+    }
+
+    h1.display-5 {
+        font-size: 2rem !important;
+    }
+
+    /* Hero Banner Mobile Adjustments */
+    .hero-glass-card {
+        padding: 2rem !important;
+        margin-top: 2rem;
+        transform: none !important;
+        /* Remove skew on mobile for better fit */
+        border-radius: 15px !important;
+        border-left: 3px solid var(--primary);
+    }
+
+    .hero-glass-card>* {
+        transform: none !important;
+    }
+
+    .header-carousel .owl-carousel-item {
+        min-height: 600px;
+        /* Ensure enough height for content */
+    }
+
+    .header-carousel .owl-carousel-item img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Prevent images from being too large */
+    .img-fluid {
+        max-height: 500px;
+        /* Cap height for general images */
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* Specific fix for client logos in grid */
+    .client-logo {
+        max-height: 80px !important;
+        width: auto !important;
+        margin-bottom: 1rem;
+    }
+
+    /* Timeline Mobile Adjustments */
+    .timeline-year {
+        font-size: 4rem;
+    }
+
+    .timeline-caption {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+
+    .timeline-desc {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+}
+
+/* =========================================
+   Mobile Optimization
+   ========================================= */
+@media (max-width: 768px) {
+
+    /* Adjust container padding to prevent cramping */
+    .container,
+    .container-fluid {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    /* Reduce font sizes for headings */
+    h1.display-1,
+    h1.display-2,
+    h1.display-3 {
+        font-size: 2.5rem !important;
+    }
+
+    h1.display-5 {
+        font-size: 2rem !important;
+    }
+
+    /* Hero Banner Mobile Adjustments */
+    .hero-glass-card {
+        padding: 2rem !important;
+        margin-top: 2rem;
+        transform: none !important;
+        /* Remove skew on mobile for better fit */
+        border-radius: 15px !important;
+        border-left: 3px solid var(--primary);
+    }
+
+    .hero-glass-card>* {
+        transform: none !important;
+    }
+
+    .header-carousel .owl-carousel-item {
+        min-height: 600px;
+        /* Ensure enough height for content */
+    }
+
+    .header-carousel .owl-carousel-item img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Prevent images from being too large */
+    .img-fluid {
+        max-height: 500px;
+        /* Cap height for general images */
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* Specific fix for client logos in grid */
+    .client-logo {
+        max-height: 80px !important;
+        width: auto !important;
+        margin-bottom: 1rem;
+    }
+
+    /* Timeline Mobile Adjustments */
+    .timeline-year {
+        font-size: 4rem;
+    }
+
+    .timeline-caption {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+
+    .timeline-desc {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
 }

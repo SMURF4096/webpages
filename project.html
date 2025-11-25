@@ -149,9 +149,9 @@
                         <div class="col-6 col-md-4 col-lg-custom-5"><img src="img/clients/Hospital/Praram9_H.png"
                                 class="img-fluid client-logo" loading="lazy" alt="โรงพยาบาลพระราม 9"></div>
                         <div class="col-6 col-md-4 col-lg-custom-5"><img src="img/clients/Hospital/PrinceSVNBH_H.png"
-                                class="img-fluid client-logo" loading="lazy" alt="โรงพยาบาลเจ้าพระยา"></div>
+                                class="img-fluid client-logo" loading="lazy" alt="โรงพยาบาลพริ้นซ์ สุวรรณภูมิ"></div>
                         <div class="col-6 col-md-4 col-lg-custom-5"><img src="img/clients/Hospital/RJRH_H.svg"
-                                class="img-fluid client-logo" loading="lazy" alt="โรงพยาบาลราชวิถี"></div>
+                                class="img-fluid client-logo" loading="lazy" alt="โรงพยาบาลรวมใจรักษ์"></div>
                         <div class="col-6 col-md-4 col-lg-custom-5"><img src="img/clients/Hospital/Siriraj_H.jpg"
                                 class="img-fluid client-logo" loading="lazy" alt="โรงพยาบาลศิริราช"></div>
                         <div class="col-6 col-md-4 col-lg-custom-5"><img src="img/clients/Hospital/ThonburiBRM_H.svg"
@@ -182,7 +182,7 @@
                                 class="img-fluid client-logo" loading="lazy" alt="บ้านบรรณวรรณ คอนโดมิเนียม"></div>
                         <div class="col-6 col-md-4 col-lg-custom-5"><img src="img/clients/Condo/Oakwood.jpg"
                                 class="img-fluid client-logo" loading="lazy" alt="Oakwood Residence"></div>
-                        <div class="col-6 col-md-4 col-lg-custom-5"><img src="img/clients/Condo/TRAPEZO.jpg"
+                        <div class="col-6 col-md-4 col-lg-custom-5"><img src="img/clients/Condo/TRAPEZO.webp"
                                 class="img-fluid client-logo" loading="lazy" alt="Trapezo Condominium"></div>
                     </div>
                 </div>
@@ -244,8 +244,8 @@
                                 class="img-fluid client-logo" loading="lazy" alt="Museum of Contemporary Art"></div>
                         <div class="col-6 col-md-4 col-lg-custom-5"><img src="img/clients/Museum/Baansukaowadee.jpg"
                                 class="img-fluid client-logo" loading="lazy" alt="บ้านสุขาขาวดี"></div>
-                        <div class="col-6 col-md-4 col-lg-custom-5"><img src="img/clients/Art/Koenitz.svg"
-                                class="img-fluid client-logo" loading="lazy" alt="Koenitz"></div>
+                        <div class="col-6 col-md-4 col-lg-custom-5"><img src="img/clients/Art/Konitz.svg"
+                                class="img-fluid client-logo" loading="lazy" alt="Konitz"></div>
                     </div>
                 </div>
 
@@ -377,38 +377,108 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
-    <!-- Project Details Modal -->
-    <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content border-0 shadow-lg rounded-3 overflow-hidden">
-                <div class="modal-header border-0 p-4 bg-white position-relative justify-content-center">
-                    <img id="projectModalLogo" src="" alt="Client Logo" style="height: 60px; object-fit: contain;">
-                    <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
+    <!-- Premium Project Modal -->
+    <div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content border-0 rounded-4 shadow-2xl overflow-hidden"
+                style="background: rgba(255, 255, 255, 0.98);">
                 <div class="modal-body p-0">
                     <div class="row g-0">
-                        <div class="col-md-5 bg-light d-flex align-items-center justify-content-center p-4">
-                            <div class="bg-white p-3 rounded shadow-sm w-100 text-center">
-                                <img id="projectModalImage" src="" class="img-fluid" alt="Project Logo"
-                                    style="max-height: 150px; object-fit: contain;">
+                        <!-- Left Column: Immersive Image Slider -->
+                        <div class="col-lg-7 position-relative bg-dark" style="min-height: 600px;">
+                            <div id="projectCarousel" class="carousel slide h-100" data-bs-ride="carousel">
+                                <div class="carousel-inner h-100" id="modalCarouselInner">
+                                    <!-- Images injected here -->
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"
+                                        aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon bg-dark rounded-circle p-3"
+                                        aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            <!-- Floating Logo Badge -->
+                            <div class="position-absolute top-0 start-0 m-4 p-3 bg-white rounded-3 shadow-sm"
+                                style="max-width: 150px; z-index: 10;">
+                                <div id="modalLogoContainer">
+                                    <!-- Logo injected here -->
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-7 p-4 p-lg-5">
-                            <h4 id="projectModalName" class="mb-3 fw-bold"></h4>
-                            <div class="mb-4">
-                                <span class="badge bg-primary-soft text-primary mb-2">Project Value</span>
-                                <h5 id="projectModalValue" class="mb-0"></h5>
+
+                        <!-- Right Column: Bento Grid Details -->
+                        <div class="col-lg-5 p-5 d-flex flex-column">
+                            <div class="d-flex justify-content-end mb-2">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                             </div>
 
-                            <h6 class="text-uppercase text-muted mb-3" style="font-size: 0.8rem; letter-spacing: 1px;">
-                                Scope of Work</h6>
-                            <ul id="projectModalScope" class="list-unstyled mb-4">
-                                <!-- Scope items will be populated here -->
-                            </ul>
+                            <!-- Header -->
+                            <div class="mb-4">
+                                <h6 class="text-uppercase text-primary fw-bold tracking-wider mb-2">Project Details</h6>
+                                <h2 class="display-5 fw-bold text-dark mb-0" id="modalProjectTitle">Project Name</h2>
+                            </div>
 
-                            <div class="border-top pt-3">
-                                <p id="projectModalDescription" class="text-muted small mb-0"></p>
+                            <!-- Dynamic Content Container -->
+                            <div id="modalContentBody" style="overflow-y: auto; max-height: 60vh; padding-right: 10px;">
+                                <!-- Bento Grid Info -->
+                                <div class="row g-3 mb-5">
+                                    <div class="col-6">
+                                        <div class="p-3 bg-light rounded-3">
+                                            <small class="text-muted text-uppercase d-block mb-1"
+                                                style="font-size: 0.7rem;">Client</small>
+                                            <span class="fw-bold text-dark" id="modalClientName">Client Name</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="p-3 bg-light rounded-3">
+                                            <small class="text-muted text-uppercase d-block mb-1"
+                                                style="font-size: 0.7rem;">Year</small>
+                                            <span class="fw-bold text-dark" id="modalProjectYear">2024</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="p-3 bg-light rounded-3">
+                                            <small class="text-muted text-uppercase d-block mb-1"
+                                                style="font-size: 0.7rem;">Location</small>
+                                            <span class="fw-bold text-dark" id="modalProjectLocation">Thailand</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="p-3 bg-light rounded-3">
+                                            <small class="text-muted text-uppercase d-block mb-1"
+                                                style="font-size: 0.7rem;">Value</small>
+                                            <span class="badge bg-success rounded-pill"
+                                                id="modalProjectValue">Completed</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Description -->
+                                <div class="mb-4">
+                                    <h6 class="fw-bold text-dark mb-3">Scope of Work</h6>
+                                    <p class="text-muted" id="modalProjectDesc">
+                                        ให้บริการออกแบบและติดตั้งระบบวิศวกรรมประกอบอาคารครบวงจร ด้วยมาตรฐานระดับสากล
+                                    </p>
+                                </div>
+
+                                <!-- Services List -->
+                                <div class="mt-auto">
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge bg-primary-soft text-primary px-3 py-2 rounded-pill"><i
+                                                class="fa fa-bolt me-2"></i>Electrical</span>
+                                        <span class="badge bg-primary-soft text-primary px-3 py-2 rounded-pill"><i
+                                                class="fa fa-snowflake-o me-2"></i>HVAC</span>
+                                        <span class="badge bg-primary-soft text-primary px-3 py-2 rounded-pill"><i
+                                                class="fa fa-fire-extinguisher me-2"></i>Fire Protection</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -420,10 +490,6 @@
     <script src="js/main.js"></script>
     <script src="js/project-popup.js"></script>
     <script src="js/cookie-consent.js"></script>
-    <script src="js/cursor-effect.js"></script>
 </body>
-
-<!-- Cursor Effect Canvas -->
-<canvas id="cursor-canvas"></canvas>
 
 </html>
